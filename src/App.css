@@ -26,52 +26,147 @@ body{
   right:0;
   z-index: 999;
 }
+.accueil{
+  height: 100%;
+}
 .logo:hover{
   cursor: pointer;
 }
 .logo img{
   transform: scale(0.9);
 }
-.accueilBackground{
-  position: absolute;
+.logo img:hover{
+  transition: 0.10s;
+  transform: scale(0.89);
+}
+.accueil{
+  background-image: url(./img/pretty-young-woman-in-sunglasses-smiling-2021-08-26-19-58-23-utc.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .blocText{
 display: flex;
 }
-
 .accueilBlocText{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--white);
-  position: relative;
-  width: 649px;
-  height: 1080px;
-  background-color: rgba(48, 48, 48, 0.5);
-}
-.accueilBackground img{
-  width: 1920px;
-  height: 1080px;
-  transform: scaleX(-1);
-  object-fit: cover;
-}
-.adresses{
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  padding: 170px;
+  max-width: 649px;
+  height: 100%;
+  max-height: 100%;
+  background-color: rgba(48, 48, 48, 0.7);
+  text-align: left;
 }
-.adresses a {
+.accueilBlocText h1{
+  line-height: 90%;
+  font-size: 100px;
+  font-weight: 500;
+  margin-bottom: 10%;
+}
+.titreEtTexteetBoutton{
+  display: flex;
+}
+.adressesEtTelBloc a {
   text-decoration: none;
   color: inherit;
 }
-.adresse{
+.adressesEtTelBloc a:hover{
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+.adressesEtTelBloc{
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.adresseEtTel{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
+.adressesEtTelBloc span{
+  margin-right: 25px;
+  scale: 1.4;
+}
+
 .telephones{
   display:flex;
   align-items: center;
   justify-content: center;
+}
+.paragrapheAccueil{
+  margin-top: 50px;
+  line-height: 35px;
+  font-size: large;
+}
+.bouttonDecouvrir{
+  margin-top: 60px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bouttonDecouvrir button{
+  color: var(--black);
+  font-size: 22px;
+  display: flex;
+  background-color: var(--pink);
+  border: none;
+  padding: 20px 60px 20px;
+  border-radius: 50px 50px 50px 50px;
+}
+.bouttonDecouvrir button:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.blocHoraires{
+  position: absolute;
+  width: fit-content;
+  right: 150px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(48, 48, 48, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  color: #a5dc92;
+  box-shadow: #303030 3px 3px 3px;
+  line-height: 40px;
+}
+.blocTextHeures{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bouttonHoraires{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  display: flex;
+  background-color: var(--pink);
+  border: none;
+  padding: 10px 30px 10px;
+  border-radius: 50px;
+}
+.blocHorairesTexte{
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.bouttonHoraires:hover{
+  cursor: pointer;
+  opacity: 0.9;
 }
