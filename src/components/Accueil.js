@@ -4,7 +4,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import background from "../img/pretty-young-woman-in-sunglasses-smiling-2021-08-26-19-58-23-utc.jpg"
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Horaires from './Horaires';
-import StoreHours from './StoreHours';
+
 
 function Accueil() {
   return (

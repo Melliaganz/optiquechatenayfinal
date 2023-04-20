@@ -33,7 +33,7 @@ body{
   cursor: pointer;
 }
 .logo img{
-  transform: scale(0.9);
+  transform: scale(0.7);
 }
 .logo img:hover{
   transition: 0.10s;
@@ -126,12 +126,13 @@ display: flex;
 .bouttonDecouvrir button:hover{
   cursor: pointer;
   opacity: 0.9;
+  transition: 0.25s;
 }
 .blocHoraires{
   position: absolute;
   width: fit-content;
   right: 150px;
-  bottom: 50px;
+  bottom: 150px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -156,6 +157,7 @@ display: flex;
   font-size: 19px;
   display: flex;
   background-color: var(--pink);
+  color: var(--black);
   border: none;
   padding: 10px 30px 10px;
   border-radius: 50px;
@@ -169,4 +171,159 @@ flex-direction: column;
 .bouttonHoraires:hover{
   cursor: pointer;
   opacity: 0.9;
+  transition: 0.25s;
+}
+.h2CarouselMarques{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+}
+.headerCarouselMarques{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rondRose{
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: var(--pink);
+  border-radius: 50%;
+  background-color: var(--pink);
+}
+.rondRose2{
+  position: relative;
+  float: right;
+  width: 100px;
+  height: 100px;
+  background: var(--pink);
+  border-radius: 50%;
+  background-color: var(--pink);
+}
+.carouselMarqueContainer{
+  display: flex;
+  justify-content: center;
+}
+.carouselMarqueContainer img{
+  height: 100px;
+  display: flex;
+}
+.nosMarquesContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.nosMarquesTitle{
+  border-bottom: solid 3px #555;
+}
+.carouselMarques {
+  overflow: hidden;
+  width: 500px;
+}
+
+.innerMarques {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carouselMarques-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: #fff;
+  object-fit: fill;
+}
+.carouselMarques-item img{
+  display: flex;
+  width: 100%;
+  height: 100% !important;
+  opacity: 0.9;
+  
+}
+.carouselMarques-item img:hover{
+  scale: 0.9;
+  opacity: 1;
+  transition: 0.25s;
+  z-index: 999;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators > button {
+  margin: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.indicators > button:hover{
+  scale: 1.1;
+  opacity: 0.8;
+}
+.choisirOptiqueContainer{
+  padding:75px
+}
+.titreChoisirOptique{
+  display: flex;
+}
+.choisirOptiqueh2{
+  color: var(--black);
+  font-size: 40px;
+  font-weight: 400;
+}
+.paragrapheTextChoisir{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.paragraphe1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rose{
+  color: var(--pink);
+  margin-left: 25px;
+  font-size: 25px;
+}
+
+.liste{
+  margin-left: 100px;
+  text-transform: capitalize;
+  color: #303030;
+  line-height: 25px;
+}
+.liste li{
+  color: var(--black);
+}
+.docteur{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink);
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+}
+.glasses{
+  background-color: var(--blue);
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--pink);
+}
+@media only screen and (max-width: 880px) {
+  .carouselMarques{
+    width: 300px;
+  }
 }

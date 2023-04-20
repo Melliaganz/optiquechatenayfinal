@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const StoreHours = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -21,12 +22,12 @@ const StoreHours = () => {
   ];
 
   const horairesMagasin = {
-    Lundi: { matin: { ouverture: "09:00", fermeture: "12:00" }, apresMidi: { ouverture: "14:00", fermeture: "18:00" } },
-    Mardi: { matin: { ouverture: "09:00", fermeture: "12:00" }, apresMidi: { ouverture: "14:00", fermeture: "18:00" } },
-    Mercredi: { matin: { ouverture: "09:00", fermeture: "12:00" }, apresMidi: { ouverture: "14:00", fermeture: "18:00" } },
-    Jeudi: { matin: { ouverture: "09:00", fermeture: "12:00" }, apresMidi: { ouverture: "14:00", fermeture: "18:00" } },
-    Vendredi: { matin: { ouverture: "09:00", fermeture: "12:00" }, apresMidi: { ouverture: "14:00", fermeture: "18:00" } },
-    Samedi: { matin: { ouverture: "10:00", fermeture: "12:30" }, apresMidi: { ouverture: "14:00", fermeture: "17:00" } },
+    Lundi: { matin: { ouverture: "Fermé", fermeture: "Fermé" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Mardi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Mercredi: { matin: { ouverture: "Fermé", fermeture: "Fermé" }, apresMidi: { ouverture: "14:30", fermeture: "19:30" } },
+    Jeudi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "18:30" } },
+    Vendredi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Samedi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "18:00" } },
     Dimanche: { matin: { ouverture: "Fermé", fermeture: "Fermé" }, apresMidi: { ouverture: "Fermé", fermeture: "Fermé" } }
   };
 
@@ -79,21 +80,21 @@ const StoreHours = () => {
     if (magasinOuvertMatin && magasinOuvertApresMidi) {
       return (
         <div>
-          Le magasin est actuellement ouvert ! Horaires : {matin.ouverture} -{" "}
+           Ouvert maintenant !<br/> Horaires : {matin.ouverture} -{" "}
           {matin.fermeture} / {apresMidi.ouverture} - {apresMidi.fermeture}
         </div>
       );
     } else if (magasinOuvertMatin) {
       return (
         <div>
-          Le magasin est ouvert ce matin ! Horaires : {matin.ouverture} -{" "}
+           Ouvert maintenant !<br/> Horaires : {matin.ouverture} -{" "}
           {matin.fermeture}
         </div>
       );
     } else if (magasinOuvertApresMidi) {
       return (
         <div>
-          Le magasin est ouvert cet après-midi ! Horaires : {apresMidi.ouverture} -{" "}
+         <span> <AccessTimeIcon /> </span> Ouvert maintenant !<br/> Horaires : {apresMidi.ouverture} -{" "}
           {apresMidi.fermeture}
         </div>
       );
@@ -104,7 +105,6 @@ const StoreHours = () => {
 
   return (
     <div className='blocTextHeures'>
-      <div>Nous sommes le {joursSemaine[currentDate.getDay()]}</div>
       {isMagasinOuvert()}
     </div>
   )};
