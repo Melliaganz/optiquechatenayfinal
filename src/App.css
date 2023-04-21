@@ -270,6 +270,10 @@ flex-direction: column;
   opacity: 0.8;
 }
 .choisirOptiqueContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   padding:75px
 }
 .titreChoisirOptique{
@@ -304,6 +308,7 @@ flex-direction: column;
 }
 .liste li{
   color: var(--black);
+  font-weight: 400;
 }
 .docteur{
   display: flex;
@@ -326,4 +331,74 @@ flex-direction: column;
   .carouselMarques{
     width: 300px;
   }
+}
+.imagesContainerChoisir{
+  display: flex;
+}
+.imagesLargeContainer{
+  scale: 0.8;
+  right: -125px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: #303030 3px 3px 20px;
+  z-index: 1;
+}
+.imageNormContainer{
+  scale: 0.8;
+  margin-top: -175px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: #303030 3px 3px 20px;
+  z-index: 2;
+}
+.rondRoseContainer{
+  position: relative;
+  top: 320px;
+  right: 190px;
+}
+.zoomed{
+  padding: 10px;
+  border-radius: 25px;
+}
+.zoomed2{
+  border-radius: 25px;
+  padding: 10px;
+}
+.nousTrouver{
+  margin-left: 150px;
+  padding: 100px;
+}
+.nousTrouverContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.titreNousTrouverh2{
+  color: var(--black);
+  font-size: 40px;
+  font-weight: 400;
+}
+.bouttonRose{
+  margin-top: 50px;
+  padding: 20px 30px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--pink);
+}
+.bouttonRose:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.mapLocation{
+  margin-top: 100px;
+  display: flex;
 }

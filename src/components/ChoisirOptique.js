@@ -1,4 +1,6 @@
 import React from 'react'
+import Magasin1 from "../img/2021-10-15.jpg"
+import Magasin2 from "../img/1977_photo5A9FB77F-OPTIQUE-CHATENAY.JPG"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserDoctor } from '@fortawesome/free-solid-svg-icons'
 import { faGlasses } from '@fortawesome/free-solid-svg-icons'
@@ -59,6 +61,19 @@ function ChoisirOptique() {
                         <li>équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div className='imagesContainerChoisir'>
+            <div className='imagesCadreContainer'>
+            <div className='imagesLargeContainer'>
+                <img src={Magasin1} alt="photoDuMagasin" className='zoomed' />
+            </div>
+            <div className='imageNormContainer'>
+                <img src={Magasin2} alt="photoDuMagasin" className='zoomed2' />
+            </div>
+            </div>
+            <div className='rondRoseContainer'>
+            <div className='rondRose'></div>
             </div>
         </div>
     </div>

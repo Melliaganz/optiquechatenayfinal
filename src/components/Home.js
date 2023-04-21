@@ -2,6 +2,7 @@ import React from 'react'
 import Accueil from "./Accueil"
 import Carousel from './Carousel'
 import ChoisirOptique from './ChoisirOptique'
+import NousTrouver from './NousTrouver'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
     <Accueil />
     <Carousel />
     <ChoisirOptique />
+    <NousTrouver />
     </div>
   )
 }
