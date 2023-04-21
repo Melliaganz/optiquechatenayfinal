@@ -13,10 +13,21 @@
 }
 
 body{
-  background: var(--white);
+  background: var(--grey);
   font-family: "Roboto", sans-serif;
   margin: none;
   padding: none;
+}
+.sectionCarouselMarques{
+  background-color: var(--white);
+}
+.choisirOptiqueChatenaySection{
+  margin-top: 20px;
+  background-color: var(--white);
+}
+.nousTrouver{
+  margin-top: 20px;
+  background-color: var(--white);
 }
 .header{
   margin: 0;
@@ -375,11 +386,9 @@ flex-direction: column;
   border-radius: 25px;
   padding: 10px;
 }
-.nousTrouver{
+.nousTrouverContainer{
   margin-left: 150px;
   padding: 100px;
-}
-.nousTrouverContainer{
   display: flex;
   justify-content: space-between;
 }
