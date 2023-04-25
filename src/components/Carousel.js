@@ -3,7 +3,8 @@ import NosMarques from "./NosMarques";
 
 const Carousel = () => {
   return (
-    <section className='sectionCarouselMarques'>
+
+    <section id="decouvrir" className='sectionCarouselMarques' >
         <div className='carouselMarquesContainer'>
             <div className='headerCarouselMarques'>
         <div className='rondRose'></div>

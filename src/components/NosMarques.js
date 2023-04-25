@@ -71,7 +71,7 @@ function NosMarques() {
             </CarouselMarquesItem>
             <CarouselMarquesItem>
               <a href="https://www.seikovision.com/fr/montures/seiko/" target="_blank" rel="noreferrer" alt="SeikoVision" title="SeikoVision">
-                <img src="http://ww1.prweb.com/prfiles/2016/01/22/13178643/Seiko-Vision-Logo.png" alt="SeikoVision"></img></a>
+                <img src="https://si.france-optique.com/img/logos/1407/thumb_seiko-optical-france-logo.jpg" alt="SeikoVision"></img></a>
             </CarouselMarquesItem>
             <CarouselMarquesItem>
               <a href="https://www.airlight.com/" target="_blank" rel="noreferrer" alt="Airlight" title="Airlight">

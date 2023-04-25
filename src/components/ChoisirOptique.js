@@ -73,7 +73,7 @@ function ChoisirOptique() {
             </div>
             </div>
             <div className='rondRoseContainer'>
-            <div className='rondRose'></div>
+            <div className='rondRose3'></div>
             </div>
         </div>
     </div>

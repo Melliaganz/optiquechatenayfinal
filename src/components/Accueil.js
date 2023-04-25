@@ -8,7 +8,7 @@ import Horaires from './Horaires';
 
 function Accueil() {
   return (
-    <section className='accueil'>
+    <section className='accueil' id="accueil">
             <div>
                 <Horaires />
             </div>
@@ -42,7 +42,7 @@ function Accueil() {
                     </p>
                 </div>
                 <div className='bouttonDecouvrir'>
-                <button className='bouttonDecouvrirLien' href="#">Découvrir notre magasin</button>
+                <button className='bouttonDecouvrirLien'><a href="#decouvrir">Découvrir notre magasin</a></button>
                 </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+html {
+  scroll-behavior: smooth ;
+}
 :root {
   --pink: #ea73b9;
   --blue: #d6edff;
@@ -44,16 +46,17 @@ body{
   cursor: pointer;
 }
 .logo img{
-  transform: scale(0.7);
+  transform: scale(0.6);
 }
 .logo img:hover{
   transition: 0.10s;
-  transform: scale(0.89);
+  transform: scale(0.79);
 }
 .accueil{
   background-image: url(./img/pretty-young-woman-in-sunglasses-smiling-2021-08-26-19-58-23-utc.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
+  height: 100%;
 }
 .blocText{
 display: flex;
@@ -124,6 +127,10 @@ display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.bouttonDecouvrir a{
+  text-decoration: none;
+  color: inherit;
 }
 .bouttonDecouvrir button{
   color: var(--black);
@@ -212,6 +219,15 @@ flex-direction: column;
   float: right;
   width: 100px;
   height: 100px;
+  background: var(--pink);
+  border-radius: 50%;
+  background-color: var(--pink);
+}
+.rondRose3{
+  position: relative;
+  float: left;
+  width: 130px;
+  height: 130px;
   background: var(--pink);
   border-radius: 50%;
   background-color: var(--pink);
@@ -349,7 +365,7 @@ flex-direction: column;
 }
 .imagesLargeContainer{
   scale: 0.8;
-  right: -125px;
+  right: -150px;
   position: relative;
   display: flex;
   align-items: center;
@@ -372,11 +388,12 @@ flex-direction: column;
   border-radius: 25px;
   box-shadow: #303030 3px 3px 20px;
   z-index: 2;
+  left: 32px;
 }
 .rondRoseContainer{
   position: relative;
-  top: 320px;
-  right: 190px;
+  top: 300px;
+  right: 180px;
 }
 .zoomed{
   padding: 10px;
@@ -411,4 +428,33 @@ flex-direction: column;
 .mapLocation{
   margin-top: 100px;
   display: flex;
+}
+.tableauHoraires{
+  background-color: var(--black);
+  color: var();
+  border-radius: 25px;
+  bottom: 30%;
+  transition: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9;
+}
+.bouttonMenuHoraires{
+  font-size: 18px;
+  background-color: var(--pink);
+  color: var(--black);
+  width: 30%;
+  padding: 10px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+}
+.bouttonMenuHoraires:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.tableauHoraires li{
+  list-style: none;
 }
