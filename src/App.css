@@ -23,6 +23,7 @@ body{
 .sectionCarouselMarques{
   background-color: var(--white);
 }
+
 .choisirOptiqueChatenaySection{
   margin-top: 20px;
   background-color: var(--white);
@@ -76,9 +77,9 @@ display: flex;
   text-align: left;
 }
 .accueilBlocText h1{
-  line-height: 90%;
+  line-height: 89.5px;
   font-size: 100px;
-  font-weight: 500;
+  font-weight: medium 91px;
   margin-bottom: 10%;
 }
 .titreEtTexteetBoutton{
@@ -108,7 +109,7 @@ display: flex;
 }
 .adressesEtTelBloc span{
   margin-right: 25px;
-  scale: 1.4;
+  scale: 1.5;
 }
 
 .telephones{
@@ -119,7 +120,7 @@ display: flex;
 .paragrapheAccueil{
   margin-top: 50px;
   line-height: 35px;
-  font-size: large;
+  font-size: 20px;
 }
 .bouttonDecouvrir{
   margin-top: 60px;
@@ -139,7 +140,7 @@ display: flex;
   background-color: var(--pink);
   border: none;
   padding: 20px 60px 20px;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 10px 10px 10px 10px;
 }
 .bouttonDecouvrir button:hover{
   cursor: pointer;
@@ -169,6 +170,7 @@ display: flex;
   justify-content: center;
 }
 .bouttonHoraires{
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +180,7 @@ display: flex;
   color: var(--black);
   border: none;
   padding: 10px 30px 10px;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 .blocHorairesTexte{
   display: flex;
@@ -200,9 +202,10 @@ flex-direction: column;
   color: var(--black);
 }
 .headerCarouselMarques{
-  margin-top: 100px;
+  padding: 30px;
+  margin-top: 25px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 .rondRose{
@@ -264,12 +267,15 @@ flex-direction: column;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 100%;
   color: #fff;
   object-fit: fill;
 }
 .carouselMarques-item img{
+  object-fit: cover;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100% !important;
   opacity: 0.9;
@@ -317,6 +323,14 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
 }
+.paragrapheTextChoisir span{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
 .paragraphe1{
   display: flex;
   flex-direction: row;
@@ -324,12 +338,12 @@ flex-direction: column;
 }
 .rose{
   color: var(--pink);
-  margin-left: 25px;
+  margin-left: 15px;
   font-size: 25px;
 }
 
 .liste{
-  margin-left: 100px;
+  margin-left: 125px;
   text-transform: capitalize;
   color: #303030;
   line-height: 25px;
@@ -344,8 +358,18 @@ flex-direction: column;
   align-items: center;
   background-color: var(--pink);
   padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
+  border-radius: 100%;
+  font-size: 15px;
+  color: #fff;
+}
+.services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink);
+  padding: 15px;
+  border-radius: 100%;
+  font-size: 15px;
   color: #fff;
 }
 .glasses{
@@ -372,7 +396,7 @@ flex-direction: column;
   justify-content: center;
   background-color: white;
   border-radius: 25px;
-  box-shadow: #303030 3px 3px 20px;
+  box-shadow: 0px 4px 27px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 .imageNormContainer{
@@ -386,9 +410,14 @@ flex-direction: column;
   justify-content: center;
   background-color: white;
   border-radius: 25px;
-  box-shadow: #303030 3px 3px 20px;
+  box-shadow: 0px 4px 27px 4px rgba(0, 0, 0, 0.25);
   z-index: 2;
   left: 32px;
+}
+.voirConditions{
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 .rondRoseContainer{
   position: relative;
@@ -441,6 +470,18 @@ flex-direction: column;
   flex-direction: column;
   z-index: 9;
 }
+.textHorairesPopup{
+  align-items: flex-start;
+}
+.tableauHoraires h2{
+  margin-bottom: 25px;
+}
+.tableauHoraires button{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bouttonMenuHoraires{
   font-size: 18px;
   background-color: var(--pink);
@@ -449,7 +490,7 @@ flex-direction: column;
   padding: 10px;
   margin-top: 6px;
   border: none;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 10px 10px 10px 10px;
 }
 .bouttonMenuHoraires:hover{
   cursor: pointer;

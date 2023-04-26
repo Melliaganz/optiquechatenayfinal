@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import StoreHours from './StoreHours';
 
 function Horaires(props) {
@@ -35,7 +34,8 @@ function Horaires(props) {
                           className='tableauHoraires'
                           style={{ 
                             position: "fixed", 
-                            width: "400px", height: "300px", padding: "40px" }}>
+                            width: "300px", height: "400px", padding: "40px" }}>
+                              <div className='textHorairesPopup'>
                           <h2>Horaires d'Optique Chatenay</h2>
                           <ul>
                             <li>Lundi : Fermé / 14:30-19h</li>
@@ -44,8 +44,9 @@ function Horaires(props) {
                             <li>Jeudi : 10:00-13:00 / 14:30-19:00</li>
                             <li>Vendredi : 10:00-13:00 / 14:30-19:00</li>
                             <li>Samedi : 10:00-13:00 / 14:30-18:00</li>
-                            <li>Dimanche : fermé</li>
+                            <li>Dimanche : Fermé</li>
                           </ul>
+                          </div>
                           <button className='bouttonMenuHoraires' onClick={togglePopup}>Fermer</button>
                         </div>
                         )}

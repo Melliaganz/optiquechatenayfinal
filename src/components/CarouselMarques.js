@@ -54,10 +54,10 @@ const CarouselMarques = ({ children }) => {
     >
       <div
         className="innerMarques"
-        style={{ transform: `translateX(-${activeIndex * 50}%)` }}
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "50%" });
+          return React.cloneElement(child, { width: "100%", display:"flex", });
         })}
       </div>
       <div className="indicators">

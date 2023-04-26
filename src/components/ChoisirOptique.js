@@ -9,7 +9,7 @@ import { faWallet } from '@fortawesome/free-solid-svg-icons'
 
 function ChoisirOptique() {
   return (
-    <section className='choisirOptiqueChatenaySection'>
+    <section id="decouvrir" className='choisirOptiqueChatenaySection'>
     <div className='choisirOptiqueContainer'>
         <div className='textChoisirOptique'>
             <div className='titreChoisirOptique'>
@@ -41,7 +41,7 @@ function ChoisirOptique() {
             </div>
             <div className='paragrapheTextChoisir'>
                 <div className='paragraphe1'>
-                <span className='docteur'><FontAwesomeIcon icon={faArrowsToEye} /></span>
+                <span className='services'><FontAwesomeIcon icon={faArrowsToEye} /></span>
                 <h4 className='rose'>Services à la persone</h4>
                 </div>
                 <div className='liste'>
@@ -76,6 +76,9 @@ function ChoisirOptique() {
             <div className='rondRose3'></div>
             </div>
         </div>
+    </div>
+    <div className="voirConditions">
+        <p>Voir conditions en magasin *</p>
     </div>
     </section>
   )
