@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Header from './components/Header';
 import Home from './components/Home';
+import Mentions from './components/Mentions';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
       <Routes>
       <Route path="/" element={<Home />} exact />
+      <Route path="/mentions-legales" element={<Mentions /> } exact />
       </Routes>
       </BrowserRouter>
       </main>

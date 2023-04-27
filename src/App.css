@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
 html {
   scroll-behavior: smooth ;
 }
@@ -446,16 +447,18 @@ flex-direction: column;
   font-weight: 500;
   margin-bottom: 30px;
 }
+.texte{
+  margin-bottom: 50px;
+}
 .textP {
   color: var(--black);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   text-align: left;
   word-break: keep-all;
-  word-spacing: 10%;
+  word-spacing: 100%;
   line-height: normal;
-  line-break: 5px;
-  width: 75%;
+  width: 100%;
 }
 .bouttonRose{
   margin-top: 50px;
@@ -535,6 +538,7 @@ flex-direction: column;
   margin-top: -50px;
 }
 .formulaire input, textarea{
+  font-family: "Roboto", sans-serif;
   padding: 15px;
   font-size: 25px;
   margin-top: 50px;
@@ -545,7 +549,7 @@ flex-direction: column;
   height: 25px;
 }
 .input::placeholder, .textarea::placeholder{
-  font: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .infosContact{
   display: flex;
@@ -568,8 +572,12 @@ flex-direction: column;
   opacity: 0.8;
 }
 .titreEtBouttons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   max-height: 900px;
   height: 100%;
+  width: 50%
 }
 .infosContact span{
   margin-left: 10px;
@@ -592,10 +600,10 @@ flex-direction: column;
   width: 100%;
 }
 .footerSection img{
-  margin-top: 15px;
   height: 75px;
 }
 .headerFooter{
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -603,6 +611,10 @@ flex-direction: column;
 }
 .imageHeaderFooter{
   margin-right: 50px;
+}
+.imageHeaderFooter a:hover, .imageHeaderFooter img:hover{
+  scale: 0.9;
+  transition: 0.25s;
 }
 .headerFooterH5{
   border-right: 1px solid;
@@ -613,6 +625,14 @@ flex-direction: column;
 }
 .logoReseaux{
   display: flex;
+}
+.logoReseaux a{
+  color: var(--black);
+  text-decoration: none;
+}
+.logoReseaux a:hover{
+  color: var(--pink);
+  transition: 0.25s;
 }
 .facebook{
   margin-right: 15px;
@@ -638,7 +658,7 @@ flex-direction: column;
   transition: 0.25s;
 }
 .footerDescription{
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   max-width: 900px;
 }
 .footerDescription p{
@@ -647,6 +667,7 @@ flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 25px;
 }
 .copyrightFooter{
   color: var(--black);
@@ -686,4 +707,74 @@ flex-direction: column;
 .elementListe4{
   padding-right: 25px;
   padding-left: 25px;
+}
+textarea{
+  resize: vertical;
+}
+.gallerieImage{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: var(--white);
+}
+
+.bouttonRetour{
+  padding: 25px;
+  background-color: var(--white);
+  height: 25px;
+}
+.bouttonRetour a{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--black);
+}
+.bouttonRetour a:hover{
+  color: var(--pink);
+  transition: 0.25s;
+  margin-left: 5px;
+}
+.MentionsLegalesTexte{  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.titreCatégoriesMentions{
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titreMention{
+  color: var(--black);
+}
+.titreCatégoriesMentions{
+  color: var(--black);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.titreCatégoriesMentions h2{
+  font-size: 35px;
+  font-weight: 400;
+}
+.texteCatégoriesMentions a {
+  text-decoration: none;
+  color: #303030;
+}
+.texteCatégoriesMentions p {
+  color: var(--black);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.titreEtTexteMentions{
+  border-bottom: 1px solid;
+}
+.titreMention{
+  font-size: 25px;
 }
