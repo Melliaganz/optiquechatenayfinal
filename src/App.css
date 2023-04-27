@@ -2,6 +2,7 @@
 html {
   scroll-behavior: smooth ;
 }
+
 :root {
   --pink: #ea73b9;
   --blue: #d6edff;
@@ -28,9 +29,10 @@ body{
   margin-top: 20px;
   background-color: var(--white);
 }
-.nousTrouver{
+.contactezNousSection{
   margin-top: 20px;
   background-color: var(--white);
+  display: flex;
 }
 .header{
   margin: 0;
@@ -441,14 +443,29 @@ flex-direction: column;
 .titreNousTrouverh2{
   color: var(--black);
   font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.textP {
+  color: var(--black);
+  font-size: 18px;
   font-weight: 400;
+  text-align: left;
+  word-break: keep-all;
+  word-spacing: 10%;
+  line-height: normal;
+  line-break: 5px;
+  width: 75%;
 }
 .bouttonRose{
   margin-top: 50px;
-  padding: 20px 30px 20px;
+  padding: 20px 300px 20px;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
   background-color: var(--pink);
+  color: var(--black);
 }
 .bouttonRose:hover{
   cursor: pointer;
@@ -496,6 +513,177 @@ flex-direction: column;
   cursor: pointer;
   opacity: 0.9;
 }
+.mapLocation{
+  margin-top: -25px;
+  padding: 40px;
+  background: linear-gradient(90deg, #fff 50%, #ea73b9 50% );
+  border-radius: 0px 25px 25px 0px;
+  max-height: 87%;
+}
 .tableauHoraires li{
   list-style: none;
+}
+.mapContainer{
+  box-shadow: 0px 4px 27px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.formulaire{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px;
+}
+.formulaire input, textarea{
+  padding: 15px;
+  font-size: 25px;
+  margin-top: 50px;
+  border: none;
+  border-bottom: 1px solid ;
+  border-bottom-color: #303030;
+  width: 100%;
+  height: 25px;
+}
+.input::placeholder, .textarea::placeholder{
+  font: "Roboto", sans-serif;
+}
+.infosContact{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+.telephoneInfos{
+  margin-top: 25px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.telephoneInfos a {
+  color: #ea73b9;
+  text-decoration: none;
+}
+.telephoneInfos a:hover{
+  opacity: 0.8;
+}
+.titreEtBouttons{
+  max-height: 900px;
+  height: 100%;
+}
+.infosContact span{
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  scale: 1.2;
+}
+.interieurInfosContact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footerSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  background-color: var(--white);
+  width: 100%;
+}
+.footerSection img{
+  margin-top: 15px;
+  height: 75px;
+}
+.headerFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.imageHeaderFooter{
+  margin-right: 50px;
+}
+.headerFooterH5{
+  border-right: 1px solid;
+  padding-right: 50px;
+  color: #303030;
+  margin-right: 50px;
+  font-size: 25px;
+}
+.logoReseaux{
+  display: flex;
+}
+.facebook{
+  margin-right: 15px;
+  margin-left: -25px;
+}
+.footerListe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.footerListe li{
+  display: inline;
+  justify-content: center;
+  flex-direction: row;
+}
+.footerListe a{
+  text-decoration: none;
+  color: var(--black);
+}
+.footerListe a:hover{
+  color: var(--pink);
+  transition: 0.25s;
+}
+.footerDescription{
+  margin-bottom: 50px;
+  max-width: 900px;
+}
+.footerDescription p{
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyrightFooter{
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.copyrightFooter a{
+  text-decoration: none;
+  color: var(--black);
+}
+.copyrightFooter a:hover{
+  color: var(--pink);
+  transition: 0.25s;
+}
+.elementListe1{
+  padding-right: 25px;
+  padding-left: 25px;
+  border-right: 1px solid
+}
+.elementListe1 a{
+  text-decoration: none;
+  color: var(--black);
+}
+.elementListe2{
+  padding-right: 25px;
+  padding-left: 25px;
+  border-right: 1px solid
+}
+.elementListe5{
+  padding-right: 25px;
+  padding-left: 25px;
+  border-right: 1px solid
+
+}
+.elementListe4{
+  padding-right: 25px;
+  padding-left: 25px;
 }

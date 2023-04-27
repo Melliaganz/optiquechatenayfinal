@@ -3,6 +3,7 @@ import Accueil from "./Accueil"
 import Carousel from './Carousel'
 import ChoisirOptique from './ChoisirOptique'
 import NousTrouver from './NousTrouver'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
     <Carousel />
     <ChoisirOptique />
     <NousTrouver />
+    <Footer />
     </div>
   )
 }
