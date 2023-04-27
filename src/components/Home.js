@@ -2,7 +2,6 @@ import React from 'react'
 import Accueil from "./Accueil"
 import Carousel from './Carousel'
 import ChoisirOptique from './ChoisirOptique'
-import Gallery from './Gallery'
 import NousTrouver from './NousTrouver'
 import Footer from './Footer'
 
@@ -12,7 +11,6 @@ function Home() {
     <Accueil />
     <Carousel />
     <ChoisirOptique />
-    <Gallery />
     <NousTrouver />
     <Footer />
     </div>
