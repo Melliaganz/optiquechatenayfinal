@@ -27,7 +27,7 @@ function Accueil() {
                 <span> <PlaceIcon /></span>
                 <a className='adresse' href="https://goo.gl/maps/5D3itaxq6TTFxw9z6" target="_blank" rel="noreferrer"> 
                 432 Avenue de la Division Leclerct <br/>
-                02290 CHATENAY MALABRY </a>
+                92290 CHATENAY MALABRY </a>
                 </div>
                 <div className='telephones'>
                 <span><LocalPhoneIcon /></span>
