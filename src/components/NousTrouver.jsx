@@ -47,7 +47,7 @@ function NousTrouver() {
                 </label>
                 <br />
                 <label>
-                    <textarea spellCheck="true" rows="1" cols="1" placeholder='Que pouvons-nous faire pour vous?' name="message" required={true} />
+                    <textarea style={{resize: "none"}} spellCheck="true" rows="1" cols="1" placeholder='Que pouvons-nous faire pour vous?' name="message" required={true} />
                 </label>
                 <br />
                 <input type="hidden" name="_redirect" value="http://localhost:3000/"></input>
