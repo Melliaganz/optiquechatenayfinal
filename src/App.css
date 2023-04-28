@@ -258,7 +258,7 @@ flex-direction: column;
 }
 .carouselMarques {
   overflow: hidden;
-  width: 500px;
+  width: 1000px;
 }
 
 .innerMarques {
@@ -272,21 +272,19 @@ flex-direction: column;
   justify-content: center;
   height: 100%;
   color: #fff;
-  object-fit: fill;
 }
 .carouselMarques-item img{
   object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100% !important;
-  opacity: 0.9;
-  
+  width: 200px;
+  height: 100% !important;  
+  margin-left: 50px;
 }
 .carouselMarques-item img:hover{
   scale: 0.9;
-  opacity: 1;
+  opacity: 0.8;
   transition: 0.25s;
   z-index: 999;
 }

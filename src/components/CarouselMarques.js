@@ -57,7 +57,7 @@ const CarouselMarques = ({ children }) => {
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "100%", display:"flex", });
+          return React.cloneElement(child, { display:"flex", });
         })}
       </div>
       <div className="indicators">

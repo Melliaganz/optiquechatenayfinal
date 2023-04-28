@@ -20,8 +20,6 @@ function NosMarques() {
                 <img src="https://www.nafnaf.com/img/logo_site.jpg" alt="Naf Naf"></img></a>
                 <a href="https://www.xaviergarcia.design/" target="_blank" rel="noreferrer" alt="Xavier Garcia" title="Xavier Garcia">
                 <img src="https://www.xaviergarcia.design/wp-content/uploads/2018/09/XavierGarcia_logo.png" alt="Xavier Garcia"></img></a>
-                <a href="https://www.xaviergarcia.design/" target="_blank" rel="noreferrer" alt="Xavier Garcia" title="Xavier Garcia">
-                <img src="https://www.xaviergarcia.design/wp-content/uploads/2018/09/XavierGarcia_logo.png" alt="Xavier Garcia"></img></a>
                 <a href="https://www.vogue-eyewear.com/fr" target="_blank" rel="noreferrer" alt="Vogue Eyewear" title="Vogue Eyewear">
                 <img src="https://www.lunettes-experoptic.fr/photo/img/Vogue_500.jpg?time=1509728689289" alt="Vogue Eyewear"></img></a>
                 <a href="https://www.ripcurl.eu/fr/" target="_blank" rel="noreferrer" alt="Rip Curl" title="Rip Curl">
