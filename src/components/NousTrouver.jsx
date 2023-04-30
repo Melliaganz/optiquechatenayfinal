@@ -20,7 +20,7 @@ function NousTrouver() {
             </div>
             <div className='textEtFormulaires'>
                 <div className='texte'>
-                    <p className='textP'>Nous serions ravis de puovoir vous aider ! 
+                    <p className='textP'>Nous serions ravis de pouvoir vous aider ! 
                         Remplissez simplement le formulaire de contact ci-dessous pour toutes vos questions ou 
                         pour prendre rendez-vous dans notre magasin d'optique </p>
                 </div>

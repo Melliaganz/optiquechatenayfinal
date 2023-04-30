@@ -34,9 +34,6 @@ const StoreHours = () => {
   const jourActuel = joursSemaine[currentDate.getDay()];
   const horairesOuverture = horairesMagasin[jourActuel];
 
-  const heureActuelle = currentDate.getHours();
-  const minuteActuelle = currentDate.getMinutes();
-  const secondeActuelle = currentDate.getSeconds();
 
   const formatDate = (date) => {
     return date < 10 ? `0${date}` : date;

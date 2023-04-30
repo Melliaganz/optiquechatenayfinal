@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Routes,
   Route,
@@ -11,10 +11,53 @@ import Mentions from './components/Mentions';
 
 
 function App() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    function onProgress(event) {
+      const { loaded, total } = event;
+      const progress = Math.round((loaded / total) * 100);
+      setProgress(progress);
+    }
+
+    function onLoad() {
+      setProgress(100);
+      setTimeout(() => {
+        setProgress(0);
+      }, 500);
+    }
+
+    window.addEventListener("progress", onProgress, true);
+    window.addEventListener("load", onLoad);
+
+    return () => {
+      window.removeEventListener("progress", onProgress, true);
+      window.removeEventListener("load", onLoad);
+    };
+  }, []);
   return (
     <React.Fragment>
+      <div
+      style={{
+        position: "fixed",
+        display: progress >= 100 ? "flex" : "none",
+        width: "100%",
+        height: "10px",
+        backgroundColor: "#ddd",
+      }}
+    >
+      <div
+        style={{
+          width: `${progress}%`,
+          height: "100%",
+          backgroundColor: "#ea73b9",
+          transition: "width 0.5s ease-in-out",
+        }}
+      ></div>
+    </div>
       <Header />
       <main className="mainContenu">
+        
       <BrowserRouter>
       <Routes>
       <Route path="/" element={<Home />} exact />

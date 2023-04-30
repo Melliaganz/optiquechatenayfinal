@@ -22,6 +22,9 @@ body{
   margin: none;
   padding: none;
 }
+.loader{
+  position: fixed;
+}
 .sectionCarouselMarques{
   background-color: var(--white);
 }
@@ -485,6 +488,7 @@ flex-direction: column;
   flex-direction: column;
   z-index: 9;
 }
+
 .textHorairesPopup{
   align-items: flex-start;
 }
