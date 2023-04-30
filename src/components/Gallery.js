@@ -4,23 +4,21 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 
-
 const Gallery = () => {
   const [images, setImages] = useState([]);
 
 
   useEffect(() => {
-    console.log(process.env)
     // Initialiser Firebase Storage
     firebase.initializeApp({
-      apiKey: process.env.REACT_APP_API_KEY,
-        authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-        databaseURL: process.env.REACT_APP_DATABASE_URL,
-        projectId: process.env.REACT_APP_PROJECT_ID,
-        storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-        messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-        appId: process.env.REACT_APP_APP_ID,
-        measurementId: process.env.REACT_APP_MEASUREMENT_ID
+      apiKey: "AIzaSyCPOZGC2k_sxBR5EtTr9g9RBr-70C7vros",
+      authDomain: "optiquechatenay-44520.firebaseapp.com",
+      databaseURL: "https://optiquechatenay-44520-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "optiquechatenay-44520",
+      storageBucket: "optiquechatenay-44520.appspot.com",
+      messagingSenderId: "288485416278",
+      appId: "1:288485416278:web:d673706364c38c60978af7",
+      measurementId: "G-Z75D2GEN9D"
     });
     const storage = firebase.storage();
 
