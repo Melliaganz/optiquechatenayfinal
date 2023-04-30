@@ -34,15 +34,6 @@ const StoreHours = () => {
   const jourActuel = joursSemaine[currentDate.getDay()];
   const horairesOuverture = horairesMagasin[jourActuel];
 
-
-  const formatDate = (date) => {
-    return date < 10 ? `0${date}` : date;
-  };
-
-  const formatTime = (heure, minute) => {
-    return `${formatDate(heure)}:${formatDate(minute)}`;
-  };
-
   const isMagasinOuvert = () => {
     const { matin, apresMidi } = horairesOuverture;
     const heureOuvertureMatin = parseInt(matin.ouverture.split(":")[0]);

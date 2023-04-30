@@ -8,6 +8,8 @@ import {
 import Header from './components/Header';
 import Home from './components/Home';
 import Mentions from './components/Mentions';
+import Administration from './components/Administration';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -62,9 +64,11 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} exact />
       <Route path="/mentions-legales" element={<Mentions /> } exact />
+      <Route path="/administration" element={<Administration />} exact/>
       </Routes>
       </BrowserRouter>
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

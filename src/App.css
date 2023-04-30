@@ -710,11 +710,6 @@ flex-direction: column;
 textarea{
   resize: vertical;
 }
-.gallerieImage{
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background-color: var(--white);
-}
 
 .bouttonRetour{
   padding: 25px;
@@ -782,7 +777,64 @@ textarea{
   margin-bottom: 25px;
   background-color: var(--white);
   padding: 25px;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+  .gallerieImage{
+    width: 800px;
+    height: 500px;
+    min-width: 800px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: var(--white);
+  }
+  .gallerieImage img {
+    min-width: 800px;
+    min-height: 500px;
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .buttonUploadPhoto{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  .adminBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .blockMotDePasseContainer{
+    color: var(--black);
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+    border-radius: 25px;
+    background-color: var(--white);
+  }
+  .bouttonRetour2{
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 25px 0px 0px 25px;
+  }
+  .bouttonRetour2 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  .bouttonRetour2 a:hover{
+    color: var(--pink);
+    transition: 0.25s;
+  }
+  .blockMotDePasseContainer input{
+    border-radius: 50px;
+  }
+  

@@ -26,7 +26,7 @@ function Footer() {
                 </div>
                 <div className='instagram'>
                 <span>
-                  <a href="#" alt="instagram"><InstagramIcon /></a></span>
+                  <a href="http://www.instagram.com" alt="instagram" style={{display: "none"}}><InstagramIcon /></a></span>
                 </div>
               </div>
             </div>
@@ -34,6 +34,7 @@ function Footer() {
               <ul>
                 <li className='elementListe2'><a href="/#accueil" alt="haut de page">Haut de page</a></li>
                 <li className='elementListe1'><a href="/mentions-legales" alt="Mention"> Mentions légales</a></li>
+                <li className='elementListe5'><a href="/administration" alt="administration">Administration</a></li>
                 <li className='elementListe4'><a href="/#contact" alt="contact">Contact</a></li>
               </ul>
             </div>
