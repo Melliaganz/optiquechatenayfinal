@@ -4,7 +4,6 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 
-require('dotenv').config();
 
 const Gallery = () => {
   const [images, setImages] = useState([]);

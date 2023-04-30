@@ -3,8 +3,6 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
-require('dotenv').config();
-
 const Administration = () => {
     const [password, setPassword] = useState('');
     const [isAuthorized, setIsAuthorized] = useState(false);
