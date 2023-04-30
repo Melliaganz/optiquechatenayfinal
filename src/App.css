@@ -818,23 +818,25 @@ textarea{
     border-radius: 25px;
     background-color: var(--white);
   }
-  .bouttonRetour2{
+  .bouttonRetour2 a{
+    border-radius: 25px 0px 0px 25px;
     background-color: var(--white);
     padding: 5px;
-    border-radius: 25px 0px 0px 25px;
-  }
-  .bouttonRetour2 a{
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: inherit;
+    transition: 0.25s;
   }
   .bouttonRetour2 a:hover{
     color: var(--pink);
+    background-color: var(--blue);
     transition: 0.25s;
   }
-  .blockMotDePasseContainer input{
-    border-radius: 50px;
+  .bouttonRetour2:hover{
+    color: var(--black);
   }
-  
+ #password-input{
+  display: flex;
+ }
