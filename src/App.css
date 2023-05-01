@@ -779,7 +779,6 @@ textarea{
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  width: 100vw;
   height: fit-content;
   margin-top: 25px;
   margin-bottom: 25px;
