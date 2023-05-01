@@ -22,9 +22,7 @@ body{
   margin: none;
   padding: none;
 }
-img {
-  border-radius: 25px;
-}
+
 .loader{
   position: fixed;
 }
@@ -789,6 +787,7 @@ textarea{
 .titreGalleriePhotos{
   margin-top: 50px;
   color: var(--black);
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -867,6 +866,9 @@ textarea{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.imagesGalleriesContainer img{
+  border-radius: 25px;
 }
 .imagesHorizontalContainer{
   margin: 70px;

@@ -5,6 +5,7 @@ function GalleriePhotos() {
     <section id="decouvrez" className='sectionGalleriePhotos'>
         <div className='titreGalleriePhotos'>
             <h2>Découvrez notre magasin</h2>
+            <h3>Cliquez sur une image et découvrez notre galerie photo</h3>
         </div>
         <div className='imagesGalleriesContainer'>
         <div className='imagesHorizontalContainer'>
