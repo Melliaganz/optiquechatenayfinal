@@ -6,6 +6,8 @@ import 'firebase/compat/storage';
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
 
   useEffect(() => {
@@ -20,10 +22,7 @@ const Gallery = () => {
       appId: "1:288485416278:web:d673706364c38c60978af7",
       measurementId: "G-Z75D2GEN9D"
     });
-    const storage = firebase.storage();
-
-    // Récupérer toutes les images à partir de Firebase Storage
-    const storageRef = storage.ref('images');
+    const storageRef = firebase.storage().ref('images');
     storageRef.listAll()
       .then((res) => {
         const images = [];
@@ -34,31 +33,33 @@ const Gallery = () => {
             .then((url) => {
               images.push({ original: url });
               thumbnails.push({ original: url, thumbnail: url }); 
+              setImages(thumbnails);
             })
             .catch((error) => {
               console.error(error);
+              setError(error);
             });
         });
-        // Mettre à jour le state avec les URLs des images
-        setImages(images);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
+        setError(error);
+        setLoading(false);
       });
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
-    <div className='gallerieImageContainer'>
-    <div className='gallerieImage'>
-      <ImageGallery
-        items={images} 
-        showPlayButton={false} 
-        showFullscreenButton={false}
-        showBullets={false} 
-      />
-      </div>
-    </div>
+    <ImageGallery items={images} />
   );
-};
+}
 
 export default Gallery;

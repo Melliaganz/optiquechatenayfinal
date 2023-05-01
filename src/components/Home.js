@@ -3,15 +3,15 @@ import Accueil from "./Accueil"
 import Carousel from './Carousel'
 import ChoisirOptique from './ChoisirOptique'
 import NousTrouver from './NousTrouver'
-import Gallery from './Gallery'
+import GalleriePhotos from './GalleriePhotos'
 
 function Home() {
   return (
     <div>
     <Accueil />
     <Carousel />
+    <GalleriePhotos />
     <ChoisirOptique />
-    <Gallery />
     <NousTrouver />
     </div>
   )

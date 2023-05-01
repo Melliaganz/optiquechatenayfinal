@@ -1,6 +1,4 @@
 import React from 'react'
-import Magasin1 from "../img/2021-10-15.jpg"
-import Magasin2 from "../img/1977_photo5A9FB77F-OPTIQUE-CHATENAY.JPG"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserDoctor } from '@fortawesome/free-solid-svg-icons'
 import { faGlasses } from '@fortawesome/free-solid-svg-icons'
@@ -66,10 +64,10 @@ function ChoisirOptique() {
         <div className='imagesContainerChoisir'>
             <div className='imagesCadreContainer'>
             <div className='imagesLargeContainer'>
-                <img src={Magasin1} alt="photoDuMagasin" className='zoomed' />
+                <img src="https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/ImagesHorizon%2F2021-10-15.jpg?alt=media&token=d058de1e-770e-44c4-9d4e-7f2ad0e3d62b" alt="photoDuMagasin" className='zoomed' />
             </div>
             <div className='imageNormContainer'>
-                <img src={Magasin2} alt="photoDuMagasin" className='zoomed2' />
+                <img src="https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/ImagesHorizon%2F1977_photo5A9FB77F-OPTIQUE-CHATENAY.JPG?alt=media&token=794a816c-c910-4617-9929-fc6b3495d4fa" alt="photoDuMagasin" className='zoomed2' />
             </div>
             </div>
             <div className='rondRoseContainer'>

@@ -22,6 +22,9 @@ body{
   margin: none;
   padding: none;
 }
+img {
+  border-radius: 25px;
+}
 .loader{
   position: fixed;
 }
@@ -772,43 +775,40 @@ textarea{
 .titreMention{
   font-size: 25px;
 }
-.gallerieImageContainer{
+.sectionGalleriePhotos{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: fit-content;
   margin-top: 25px;
   margin-bottom: 25px;
-  background-color: var(--white);
-  padding: 25px;
-  max-height: 100vh;
+}
+.titreGalleriePhotos{
+  margin-top: 50px;
+  color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-  .gallerieImage{
-    width: 800px;
-    height: 500px;
-    min-width: 800px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    background-color: var(--white);
-  }
-  .gallerieImage img {
-    min-width: 800px;
-    min-height: 500px;
-    width: 800px;
-    height: 500px;
-    object-fit: cover;
-  }
-  .buttonUploadPhoto{
+.titreGalleriePhotos h2{
+  font-weight: normal 400;
+  font-size: 40px;
+}
+.buttonUploadPhoto{
     display: flex;
     justify-items: center;
     align-items: center;
   }
-  .adminBlock{
+.adminBlock{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
   }
-  .blockMotDePasseContainer{
+.blockMotDePasseContainer{
     color: var(--black);
     font-size: large;
     display: flex;
@@ -818,7 +818,7 @@ textarea{
     border-radius: 25px;
     background-color: var(--white);
   }
-  .bouttonRetour2 a{
+.bouttonRetour2 a{
     border-radius: 25px 0px 0px 25px;
     background-color: var(--white);
     padding: 5px;
@@ -829,7 +829,7 @@ textarea{
     color: inherit;
     transition: 0.25s;
   }
-  .bouttonRetour2 a:hover{
+.bouttonRetour2 a:hover{
     color: var(--pink);
     background-color: var(--blue);
     transition: 0.25s;
@@ -840,3 +840,58 @@ textarea{
  #password-input{
   display: flex;
  }
+#labelMdp{
+  display: flex;
+  justify-content: center;
+}
+.bouttonRetour3{
+  background-color: var(--grey);
+  z-index: 999;
+  position: fixed;
+  display: flex;
+}
+.bouttonRetour3 a{
+  padding: 5px;
+  text-decoration: none;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bouttonRetour3 a:hover{
+  color: var(--pink);
+  transition: 0.25s;
+}
+.imagesGalleriesContainer{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagesHorizontalContainer{
+  margin: 70px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.imagesHorizontalContainer img{
+  min-width: 1000px;
+  max-height: 400px;
+  object-fit: cover;
+}
+.imagesVerticales{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagesVerticales img{
+  object-fit: cover;
+  width: 400px;
+  height: 870px;
+
+}
+.imagesGalleriesContainer a:hover{
+  opacity: 0.9;
+  transition: 0.2s;
+}

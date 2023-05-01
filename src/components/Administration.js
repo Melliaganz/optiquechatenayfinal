@@ -9,7 +9,6 @@ const Administration = () => {
     const [isAuthorized, setIsAuthorized] = useState(false);
     const [selectedFiles, setSelectedFiles] = useState(null);
     const [uploadProgress, setUploadProgress] = useState(0);
-    const [isUploadSuccessful, setIsUploadSuccessful] = useState(false);
 
   
     const handlePasswordChange = (event) => {
@@ -69,7 +68,6 @@ const Administration = () => {
             // Upload terminé
             setUploadProgress(0);
             setSelectedFiles(null);
-            setIsUploadSuccessful(true); // définir le statut d'upload comme réussi
             window.location.reload();
           }
         );

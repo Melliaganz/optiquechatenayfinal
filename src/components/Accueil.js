@@ -40,7 +40,7 @@ function Accueil() {
                     </p>
                 </div>
                 <div className='bouttonDecouvrir'>
-                <button className='bouttonDecouvrirLien'><a href="#decouvrir">Découvrir notre magasin</a></button>
+                <button className='bouttonDecouvrirLien'><a href="#decouvrez">Découvrir notre magasin</a></button>
                 </div>
                 </div>
             </div>
