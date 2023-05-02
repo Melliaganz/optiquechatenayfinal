@@ -784,7 +784,7 @@ textarea{
   margin-bottom: 25px;
 }
 .titreGalleriePhotos{
-  margin-top: 50px;
+  margin-top: -50px;
   color: var(--black);
   flex-direction: column;
   display: flex;
@@ -865,6 +865,7 @@ textarea{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -40px;
 }
 .imagesGalleriesContainer img{
   border-radius: 25px;
