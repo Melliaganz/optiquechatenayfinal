@@ -11,7 +11,6 @@ const Gallery = () => {
 
 
   useEffect(() => {
-    console.log(process.env)
     // Initialiser Firebase Storage
     firebase.initializeApp({
       apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
