@@ -82,4 +82,4 @@ function ChoisirOptique() {
   )
 }
 
-export default ChoisirOptique
+export default React.memo(ChoisirOptique);

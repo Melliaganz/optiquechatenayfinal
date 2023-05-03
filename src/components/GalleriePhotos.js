@@ -3,7 +3,7 @@ import React from 'react'
 function GalleriePhotos() {
   return (
     <section id="decouvrez" className='sectionGalleriePhotos'>
-
+        <div className="gallerieDimageInterieur">
         <div className='imagesGalleriesContainer'>
         <div className='imagesHorizontalContainer'>
         <a href="/gallerie" alt="Galleries"><img src="https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/ImagesHorizon%2FIMG-20221116-WA0001.jpg?alt=media&token=559ac80c-7394-421e-8847-f73b7ccd8b05" alt="magasin"></img></a>
@@ -15,6 +15,7 @@ function GalleriePhotos() {
         </div>
         <div className='titreGalleriePhotos'>
             <h4>Cliquez sur une image et découvrez notre galerie photo</h4>
+        </div>
         </div>
     </section>
   )

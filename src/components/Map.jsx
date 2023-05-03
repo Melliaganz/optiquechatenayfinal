@@ -46,13 +46,14 @@ function Map(props) {
         {showInfo && (
           <div
             style={{
-              position: "absolute",
+              position: "relative",
               top: "10px",
               left: "10px",
               padding: "10px",
               background: "#fff",
               boxShadow: "0 0 10px rgba(0,0,0,.3)",
               zIndex: "50",
+              width: "fit-content",
             }}
           >
             {address}

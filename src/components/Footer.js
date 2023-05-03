@@ -1,5 +1,5 @@
 import React from 'react'
-import  LogoOptique  from "../img/logo.png"; 
+import  LogoOptique  from "../img/logo.webp"; 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
@@ -52,4 +52,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default React.memo(Footer)

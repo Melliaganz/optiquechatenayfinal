@@ -80,4 +80,4 @@ const CarouselMarques = ({ children }) => {
   );
 };
 
-export default CarouselMarques;
+export default React.memo(CarouselMarques);

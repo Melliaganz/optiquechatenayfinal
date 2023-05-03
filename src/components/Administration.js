@@ -113,4 +113,4 @@ const Administration = () => {
   );
 };
 
-export default Administration;
+export default React.memo(Administration);

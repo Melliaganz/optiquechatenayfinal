@@ -7,7 +7,7 @@ import Horaires from './Horaires';
 function Accueil() {
   return (
     <section className='accueil' id="accueil">
-            <div>
+            <div className='PositionBlocHoraire'>
                 <Horaires />
             </div>
         <div className='accueilContainer'>
@@ -24,7 +24,7 @@ function Accueil() {
                     <div className='adresseEtTel'>
                 <span> <PlaceIcon /></span>
                 <a className='adresse' href="https://goo.gl/maps/5D3itaxq6TTFxw9z6" target="_blank" rel="noreferrer"> 
-                432 Avenue de la Division Leclerct <br/>
+                432 Avenue de la Division Leclerc <br/>
                 92290 CHATENAY MALABRY </a>
                 </div>
                 <div className='telephones'>
@@ -49,4 +49,4 @@ function Accueil() {
     </section>
   )
 }
-export default Accueil
+export default React.memo(Accueil);

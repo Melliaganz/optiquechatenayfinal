@@ -1,5 +1,5 @@
 import React from 'react'
-import logoalt from "../img/logoalt.png";
+import logoalt from "../img/logoalt.webp";
 
 function Header() {
   return (
@@ -11,4 +11,4 @@ function Header() {
   )
 }
 
-export default Header
+export default React.memo(Header)
