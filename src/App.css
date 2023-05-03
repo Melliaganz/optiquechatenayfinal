@@ -9,11 +9,11 @@ img{
   height: 100%;
 }
 :root {
-  --pink: #ea73b9;
+  --pink: #ED5EAF;
   --blue: #d6edff;
   --grey: #d9d9d9;
   --white: #FFFFFF;
-  --black: #303030;
+  --black: #292929;
 }
 *{
   margin: 0;
@@ -573,7 +573,7 @@ flex-direction: column;
   align-items: center;
 }
 .telephoneInfos a {
-  color: #ea73b9;
+  color: var(--pink);
   text-decoration: none;
 }
 .telephoneInfos a:hover{
@@ -899,4 +899,7 @@ textarea{
 .imagesGalleriesContainer a:hover{
   opacity: 0.9;
   transition: 0.2s;
+}
+@media screen {
+  
 }

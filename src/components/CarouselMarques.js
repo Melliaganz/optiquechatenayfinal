@@ -62,6 +62,7 @@ const CarouselMarques = ({ children }) => {
       </div>
       <div className="indicators">
         <button
+        aria-label="Précédent"
           onClick={() => {
             updateIndex(activeIndex - 1);
           }}
@@ -69,6 +70,7 @@ const CarouselMarques = ({ children }) => {
           <ArrowBackIcon />
         </button>
         <button className="indicators"
+        aria-label="Suivant"
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
