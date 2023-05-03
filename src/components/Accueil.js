@@ -7,13 +7,9 @@ import Horaires from './Horaires';
 function Accueil() {
   return (
     <section className='accueil' id="accueil">
-            <div className='PositionBlocHoraire'>
-                <Horaires />
-            </div>
         <div className='accueilContainer'>
             <div className='accueilBackground'>
             </div>
-            <div className='blocText'>
             <div className='accueilBlocText'>
                 <div className='titreEtTextetBoutton'>
                 <h1 className='titreAccueil'>
@@ -44,6 +40,8 @@ function Accueil() {
                 </div>
                 </div>
             </div>
+            <div className='PositionBlocHoraire'>
+                <Horaires />
             </div>
         </div>
     </section>
