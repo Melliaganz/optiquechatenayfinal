@@ -11,6 +11,7 @@ import Mentions from './components/Mentions';
 import Administration from './components/Administration';
 import Footer from './components/Footer';
 import GalleriedePhotos from './components/GalleriedePhotos';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
       <Route path="/mentions-legales" element={<Mentions /> } exact />
       <Route path="/administration" element={<Administration />} exact/>
       <Route path="/gallerie" element={<GalleriedePhotos />} exact/>
+      <Route path="*" element={<NotFound />} exact />
       </Routes>
       </BrowserRouter>
       </main>
