@@ -24,10 +24,6 @@ function Footer() {
                     </a>
                     </span>
                 </div>
-                <div className='instagram'>
-                <span>
-                  <a href="http://www.instagram.com" alt="instagram" style={{display: "none"}}><InstagramIcon /></a></span>
-                </div>
               </div>
             </div>
             <div className='footerListe'>
