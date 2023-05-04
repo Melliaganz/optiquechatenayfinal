@@ -51,7 +51,7 @@ function NousTrouver() {
                 </label>
                 <br />
                 <input type="hidden" name="_redirect" value="http://localhost:3000/"></input>
-                <button disabled={submitting} type="submit" className='bouttonRose'>{submitting ? "Envoi... " : "Envoyer !"}</button>
+                <button disabled={submitting} type="submit" className='bouttonRose'>{submitting ? "Envoi... " : "Envoyer "}</button>
                 </form>
             </div>
             <div className='infosContact'>

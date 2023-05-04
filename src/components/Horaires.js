@@ -24,7 +24,9 @@ function Horaires(props) {
   return (
     <div className='blocHoraires'>
                     <div className='blocHorairesTexte'>
+                      <div className='encadréOuvertFermé'>
                         <StoreHours />
+                        </div>
                         <button onClick={togglePopup} className='bouttonHoraires'>
                             Voir les horaires
                         </button>
