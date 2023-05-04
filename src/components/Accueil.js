@@ -8,8 +8,6 @@ function Accueil() {
   return (
     <section className='accueil' id="accueil">
         <div className='accueilContainer'>
-            <div className='accueilBackground'>
-            </div>
             <div className='accueilBlocText'>
                 <div className='titreEtTextetBoutton'>
                 <h1 className='titreAccueil'>
@@ -38,10 +36,13 @@ function Accueil() {
                 <div className='bouttonDecouvrir'>
                 <button className='bouttonDecouvrirLien'><a href="#decouvrez">Découvrir notre magasin</a></button>
                 </div>
-                </div>
-            </div>
-            <div className='PositionBlocHoraire'>
+                <div className='PositionBlocHoraire2'>
                 <Horaires />
+                </div>
+                </div>
+                <div className='PositionBlocHoraire'>
+                <Horaires />
+            </div>
             </div>
         </div>
     </section>
