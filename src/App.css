@@ -990,11 +990,36 @@ textarea{
     color: #a5dc92;
     line-height: 40px;
     width: 70%;
+    margin-top: 25px;
   }
 .accueilBlocText{
     max-width: 100vw;
 }
 .titreEtTextetBoutton{
   scale: 0.8;
+}
+.gallerieDimageInterieur{
+  scale: 0.7;
+  padding: 0px;
+}
+.rondRoseContainer{
+  display: none;
+}
+.choisirOptiqueContainer{
+  width: 70%;
+  padding-left: 10%;
+}
+.imagesContainerChoisir{
+  display: none;
+}
+.nousTrouverContainer{
+  flex-direction: column;
+  align-items: center;
+}
+.mapLocation{
+  margin-top: 25px;
+}
+.texteCatégoriesMentions{
+  width: 70%;
 }
 }
