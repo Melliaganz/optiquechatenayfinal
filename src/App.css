@@ -362,7 +362,6 @@ flex-direction: column;
 
 .liste{
   margin-left: 125px;
-  text-transform: capitalize;
   color: var(--black);
   line-height: 25px;
 }

@@ -20,7 +20,7 @@ function ChoisirOptique() {
                 </div>
                 <div className='liste'>
                     <ul>
-                        <li>équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
+                        <li>Équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
                     </ul>
                 </div>
             </div>
@@ -31,7 +31,7 @@ function ChoisirOptique() {
                 </div>
                 <div className='liste'>
                     <ul>
-                        <li> large gamme de lentilles</li>
+                        <li>Large gamme de lentilles</li>
                         <li>Plus de 1000 montures de marques pour femme <br/> homme et enfant </li>
                         <li>2ème paire à 1€*</li>
                     </ul>
@@ -52,11 +52,11 @@ function ChoisirOptique() {
             <div className='paragrapheTextChoisir'>
                 <div className='paragraphe1'>
                 <span className='glasses'><FontAwesomeIcon icon={faWallet} /></span>
-                <h4 className='rose'> Des spécialistes à votre écoute </h4>
+                <h4 className='rose'> Paiement sur mesure </h4>
                 </div>
                 <div className='liste'>
                     <ul>
-                        <li>équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
+                        <li>Équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
                     </ul>
                 </div>
             </div>
