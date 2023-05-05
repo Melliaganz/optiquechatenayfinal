@@ -1100,7 +1100,7 @@ textarea{
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: fit-content;
+    height: 100vh;
   }
   .titreEtTextetBoutton{
     display: flex;
@@ -1122,7 +1122,9 @@ textarea{
     width: 70%;
     margin-top: 25px;
   }
-  
+  .imagesContainerChoisir{
+    display: none;
+  }
   .bouttonDecouvrir{
     display: none;
   }
@@ -1135,11 +1137,35 @@ textarea{
   .rondRoseContainer{
     display: none;
   }
+  .sectionGalleriePhotos{
+    align-items: center;
+  }
   .choisirOptiqueContainer{
     width: 70%;
     padding-left: 10%;
   }
-  .imagesContainerChoisir{
+  .gallerieDimageInterieur h1{
+    color: var(--black);
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    display: flex;
+  }
+  .premiereImageGallerie{
+    margin-bottom: 0px;
+  }
+  .secondeImageGallerie{
+    margin-top: 0px;
+  }
+  .troisiemeImageGallerie{
+    display: flex;
+    margin-top: 25px;
+  }
+  .imagesHorizontalContainer img{
+    width: 75%;
+    height: 75%;
+  }
+  .imagesVerticales{
     display: none;
   }
   .nousTrouverContainer{
@@ -1159,15 +1185,14 @@ textarea{
   .mapLocation{
     scale: 0.8;
   }
-  #decouvrez{
-    display: none;
-  }
+
   .textP{
     width: 75%;
   }
   .footerDescription{
     width: 75%;
   }
+  
   footer{
     display: flex;
     justify-content: center;
@@ -1212,9 +1237,11 @@ textarea{
     margin-top: 25px;
   }
 .accueilBlocText{
-    max-width: 100vw;
+    max-width: 100%;
 }
-
+.formulaire input, textarea{
+  text-align: center;
+}
 .titreEtTextetBoutton{
     display: flex;
     justify-content: center;
@@ -1232,21 +1259,27 @@ textarea{
   padding: 0px;
 }
 .gallerieDimageInterieur h1{
+  color: var(--black);
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 25px;
   display: flex;
 }
 .premiereImageGallerie{
   margin-bottom: 0px;
 }
 .secondeImageGallerie{
-  margin-top: 25px;
+  margin-top: 0px;
 }
 .troisiemeImageGallerie{
   display: flex;
   margin-top: 25px;
 }
-.imagesHorizontalContainer img{
-  
+.imagesHorizontalContainer{
   justify-content: center;
+
+}
+.imagesHorizontalContainer img{
   width: 75%;
   height: 75%;
 }
@@ -1257,8 +1290,10 @@ textarea{
   display: none;
 }
 .choisirOptiqueContainer{
-  width: 70%;
   padding-left: 10%;
+}
+.titreGalleriePhotos{
+  margin-bottom: 50px;
 }
 .imagesContainerChoisir{
   display: none;
@@ -1273,5 +1308,9 @@ textarea{
 }
 .texteCatégoriesMentions{
   width: 70%;
+}
+.sectionGalleriePhotos{
+  justify-content: center;
+  align-items: center;
 }
 }
