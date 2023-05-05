@@ -12,6 +12,7 @@ import Administration from './components/Administration';
 import Footer from './components/Footer';
 import GalleriedePhotos from './components/GalleriedePhotos';
 import NotFound from './components/NotFound';
+import ScrollTopButton from './components/ScrollTopButton';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
       ></div>
     </div>
       <Header />
+      <ScrollTopButton />
       <main className="mainContenu">
         
       <BrowserRouter>
