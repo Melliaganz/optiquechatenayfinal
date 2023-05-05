@@ -64,7 +64,31 @@ const StoreHours = () => {
     const magasinOuvertApresMidi =
       heureActuelleMinutes >= heureOuvertureApresMidiMinutes &&
       heureActuelleMinutes <= heureFermetureApresMidiMinutes;
-
+      const getNextOpeningTime = () => {
+        const weekDay = currentDate.getDay();
+        let nextOpeningTime = null;
+        let nextOpeningDay = null;
+        let i = 1;
+    
+        while (!nextOpeningTime && i <= joursSemaine.length) {
+          const day = (weekDay + i) % joursSemaine.length;
+          const hours = horairesMagasin[joursSemaine[day]];
+          if (hours.matin.ouverture !== "Fermé" || hours.apresMidi.ouverture !== "Fermé") {
+            nextOpeningTime = `${joursSemaine[day]} : ${
+              hours.matin.ouverture !== "Fermé"
+                ? `de ${hours.matin.ouverture} à ${hours.matin.fermeture}`
+                : `de ${hours.apresMidi.ouverture} à ${hours.apresMidi.fermeture}`
+            }`;
+            nextOpeningDay = day;
+          }
+          i++;
+        }
+        if (!nextOpeningTime) {
+          return "Le magasin est fermé pour la journée";
+        } else {
+          return <div>Prochaine ouverture : <br/> {nextOpeningTime} </div>;
+        }
+      };
     if (magasinOuvertMatin && magasinOuvertApresMidi) {
       return (
         <div>
@@ -87,7 +111,7 @@ const StoreHours = () => {
         </div>
       );
     } else {
-      return <div>Le magasin est actuellement fermé.</div>;
+      return <div>{getNextOpeningTime()}</div>;
     }
   };
 

@@ -4,6 +4,7 @@ function GalleriePhotos() {
   return (
     <section id="decouvrez" className='sectionGalleriePhotos'>
         <div className="gallerieDimageInterieur">
+          <h1>Galerie Photos</h1>
         <div className='imagesGalleriesContainer'>
         <div className='imagesHorizontalContainer'>
         <div className='premiereImageGallerie'>
@@ -11,6 +12,9 @@ function GalleriePhotos() {
         </div>
         <div className='secondeImageGallerie'>
         <a href="/gallerie" alt="Galleries"><img src="https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/ImagesHorizon%2F2021-10-15.jpg?alt=media&token=d058de1e-770e-44c4-9d4e-7f2ad0e3d62b" alt="magasin"></img></a>
+        </div>
+        <div className='troisiemeImageGallerie'>
+        <a href="/gallerie" alt="Galleries"><img src="https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/ImagesHorizon%2FIMG-20221116-WA0004.jpg?alt=media&token=5ec28827-fd6d-4f01-b557-006140e5143a" alt="magasin"></img></a>
         </div>
         </div>
         <div className='imagesVerticales'>

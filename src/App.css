@@ -873,13 +873,18 @@ textarea{
   flex-direction: column;
   align-items: center;
   padding: 75px;
-
+}
+.gallerieDimageInterieur h1{
+  display: none;
 }
 .gallerieDimageInterieur img{
   box-shadow: 0px 4px 27px 4px rgba(0, 0, 0, 0.25);
 }
 .premiereImageGallerie{
   margin-bottom: 70px;
+}
+.troisiemeImageGallerie{
+  display: none;
 }
 .imagesGalleriesContainer{
   display: flex;
@@ -931,25 +936,131 @@ textarea{
   scale: 2;
 }
 @media screen and (max-width:576px) {
+  .accueil{
+    background-position: 50%;
+  }
+  .bouttonHoraires{
+    display: none;
+  }
+  .adressesEtTelBloc{
+    align-items: center;
+  }
   .accueilBlocText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100vw;
+  }
+  .titreEtTextetBoutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .PositionBlocHoraire{
+    display: none;
+  }
+  .PositionBlocHoraire2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    color: #a5dc92;
+    line-height: 40px;
+    width: 70%;
+    margin-top: 25px;
+  }
+  
+  .bouttonDecouvrir{
+    display: none;
   }
   .PositionBlocHoraire{
     display: none;
   }
   .PositionBlocHoraire2{
     display: flex;
+  }
+  .carouselMarques{
+    width: 500px;
+  }
+  .textP{
+    width: 75%;
+  }
+  .footerDescription{
+    width: 75%;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .accueil{
+    background-position: 50%;
+  }
   .accueilBlocText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
+  }
+  .titreEtTextetBoutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .PositionBlocHoraire{
+    display: none;
+  }
+  .PositionBlocHoraire2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    color: #a5dc92;
+    line-height: 40px;
+    width: 70%;
+    margin-top: 25px;
+  }
+  .choisirOptiqueContainer{
+    width: 70%;
+    padding-left: 10%;
+  }
+  .bouttonDecouvrir{
+    display: none;
   }
   .PositionBlocHoraire{
     display: none;
   }
   .PositionBlocHoraire2{
     display: flex;
+  }
+  .carouselMarques{
+    width: 500px;
+  }
+  .textP{
+    width: 75%;
+  }
+  .footerDescription{
+    width: 75%;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1005,7 +1116,13 @@ textarea{
   .nousTrouverContainer{
     flex-direction: column;
     align-items: center;
-    width: none;
+    width: 75%;
+  }
+  .formulaire input, textarea{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
   }
   .titreEtBouttons{
     width: auto;
@@ -1016,8 +1133,23 @@ textarea{
   #decouvrez{
     display: none;
   }
+  .textP{
+    width: 75%;
+  }
+  .footerDescription{
+    width: 75%;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1280px) {
+  .header img{
+    height: 75%;
+  }
   .accueil{
     background-position: 100%;
   }
@@ -1053,9 +1185,7 @@ textarea{
 .accueilBlocText{
     max-width: 100vw;
 }
-.encadréOuvertFermé{
-  display: none;
-}
+
 .titreEtTextetBoutton{
     display: flex;
     justify-content: center;
@@ -1064,9 +1194,35 @@ textarea{
     text-align: center;
     scale: 0.8;
 }
+.titreEtBouttons{
+  width: 75%;
+  align-items: center;
+}
 .gallerieDimageInterieur{
-  scale: 0.7;
+  width: 75%;
   padding: 0px;
+}
+.gallerieDimageInterieur h1{
+  display: flex;
+}
+.premiereImageGallerie{
+  margin-bottom: 0px;
+}
+.secondeImageGallerie{
+  margin-top: 25px;
+}
+.troisiemeImageGallerie{
+  display: flex;
+  margin-top: 25px;
+}
+.imagesHorizontalContainer img{
+  
+  justify-content: center;
+  width: 75%;
+  height: 75%;
+}
+.imagesVerticales{
+  display: none;
 }
 .rondRoseContainer{
   display: none;
