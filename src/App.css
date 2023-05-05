@@ -936,10 +936,13 @@ textarea{
   scale: 2;
 }
 @media screen and (max-width:576px) {
+    .sectionCarouselMarques{
+    display: none;
+  }
   .accueil{
     background-position: 50%;
   }
-  .bouttonHoraires{
+  .imagesContainerChoisir{
     display: none;
   }
   .adressesEtTelBloc{
@@ -1003,6 +1006,20 @@ textarea{
     align-items: center;
     flex-direction: column;
   }
+  .nousTrouverContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+  .titreEtBouttons{
+    display: flex;
+    flex-direction: column;
+  }
+  .mapLocation{
+    display: none;
+  }
+  #contact{
+    display: none;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .accueil{
@@ -1050,6 +1067,7 @@ textarea{
   .carouselMarques{
     width: 500px;
   }
+  
   .textP{
     width: 75%;
   }
@@ -1072,6 +1090,7 @@ textarea{
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    height: fit-content;
   }
   .titreEtTextetBoutton{
     display: flex;
