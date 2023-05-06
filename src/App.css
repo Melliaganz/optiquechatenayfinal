@@ -1131,12 +1131,30 @@ textarea{
   .carouselMarques{
     width: 500px;
   }
-  
+  .imagesContainerChoisir{
+    display: none;
+  }
+  .titreEtBouttons{
+    align-items: center;
+    width: auto;
+  }
   .textP{
-    width: 75%;
+    align-items: center;
+  }
+  .rondRoseContainer{
+    display: none;
   }
   .footerDescription{
     width: 75%;
+  }
+  .nousTrouverContainer{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .mapLocation{
+    margin-top: 100px;
+    margin-bottom: 50px;
   }
   footer{
     display: flex;
@@ -1365,4 +1383,9 @@ textarea{
   justify-content: center;
   align-items: center;
 }
+}
+@media screen and (min-width: 1920px) {
+  .accueil{
+    background-size: 100%;
+  }
 }
