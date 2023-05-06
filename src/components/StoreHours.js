@@ -69,7 +69,7 @@ const StoreHours = () => {
         let nextOpeningTime = null;
         let nextOpeningDay = null;
         let i = 1;
-    
+        
         while (!nextOpeningTime && i <= joursSemaine.length) {
           const day = (weekDay + i) % joursSemaine.length;
           const hours = horairesMagasin[joursSemaine[day]];
@@ -79,7 +79,7 @@ const StoreHours = () => {
                 ? `de ${hours.matin.ouverture} à ${hours.matin.fermeture}`
                 : `de ${hours.apresMidi.ouverture} à ${hours.apresMidi.fermeture}`
             }`;
-            nextOpeningDay = day;
+            nextOpeningDay = joursSemaine[day];
           }
           i++;
         }
