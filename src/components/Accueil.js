@@ -1,10 +1,15 @@
 import React from 'react'
+import isMobile from 'is-mobile';
 import PlaceIcon from '@mui/icons-material/Place';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Horaires from './Horaires';
 
 
 function Accueil() {
+    const isMobileDevice = isMobile();
+    const googleMapsLink = isMobileDevice ?
+    'geo:0,0?q=432+avenue+de+la+division+leclerc,+92290+chatenay+malabry' :
+    'https://goo.gl/maps/5D3itaxq6TTFxw9z6'
   return (
     <section className='accueil' id="accueil">
         <div className='accueilContainer'>
@@ -17,7 +22,7 @@ function Accueil() {
                 <div className='adressesEtTelBloc'>
                     <div className='adresseEtTel'>
                 <span> <PlaceIcon /></span>
-                <a className='adresse' href="https://goo.gl/maps/5D3itaxq6TTFxw9z6" target="_blank" rel="noreferrer"> 
+                <a className='adresse' href={googleMapsLink} target="_blank" rel="noreferrer"> 
                 432 Avenue de la Division Leclerc <br/>
                 92290 CHATENAY MALABRY </a>
                 </div>
