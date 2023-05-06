@@ -952,9 +952,25 @@ textarea{
   .imagesVerticales{
     display: none;
   }
+  .gallerieDimageInterieur h1{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  .imagesHorizontalContainer{
+    margin-right: 0;
+  }
   .imagesHorizontalContainer img{
-    width: 50%;
-
+    min-width: 300px;
+  }
+  .premiereImageGallerie{
+    margin-bottom: 25px;
+  }
+  .secondeImageGallerie{
+    margin-top: none;
+  }
+  .troisiemeImageGallerie{
+    display: flex;
+    margin-top: 25px;
   }
   .accueil{
     background-position: 50%;
