@@ -8,7 +8,7 @@ import Horaires from './Horaires';
 function Accueil() {
     const isMobileDevice = isMobile();
     const googleMapsLink = isMobileDevice ?
-    'geo:0,0?q=432+avenue+de+la+division+leclerc,+92290+chatenay+malabry' :
+    'maps:https://goo.gl/maps/5D3itaxq6TTFxw9z6' :
     'https://goo.gl/maps/5D3itaxq6TTFxw9z6'
   return (
     <section className='accueil' id="accueil">
