@@ -8,7 +8,7 @@ import Horaires from './Horaires';
 function Accueil() {
     const isMobileDevice = isMobile();
     const googleMapsLink = isMobileDevice ?
-    'maps:https://goo.gl/maps/5D3itaxq6TTFxw9z6' :
+    'maps://https://goo.gl/maps/5D3itaxq6TTFxw9z6' :
     'https://goo.gl/maps/5D3itaxq6TTFxw9z6'
   return (
     <section className='accueil' id="accueil">
