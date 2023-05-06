@@ -952,6 +952,9 @@ textarea{
   .imagesVerticales{
     display: none;
   }
+  .gallerieDimageInterieur{
+    padding: 50px;
+  }
   .gallerieDimageInterieur h1{
     display: flex;
     margin-bottom: 25px;
@@ -1086,6 +1089,32 @@ textarea{
     width: 70%;
     margin-top: 25px;
   }
+  .gallerieDimageInterieur{
+    padding: 50px;
+  }
+  .gallerieDimageInterieur h1{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  .imagesHorizontalContainer{
+    margin-right: 0;
+  }
+  .imagesHorizontalContainer img{
+    min-width: 300px;
+  }
+  .premiereImageGallerie{
+    margin-bottom: 25px;
+  }
+  .secondeImageGallerie{
+    margin-top: none;
+  }
+  .troisiemeImageGallerie{
+    display: flex;
+    margin-top: 25px;
+  }
+  .imagesVerticales{
+    display: none;
+  }
   .choisirOptiqueContainer{
     width: 70%;
     padding-left: 10%;
@@ -1170,27 +1199,30 @@ textarea{
     width: 70%;
     padding-left: 10%;
   }
+  .gallerieDimageInterieur{
+    padding: 50px;
+  }
   .gallerieDimageInterieur h1{
-    color: var(--black);
-    font-size: 40px;
-    margin-top: 50px;
-    margin-bottom: 25px;
     display: flex;
+    margin-bottom: 25px;
+  }
+  .imagesHorizontalContainer{
+    margin-right: 0;
+  }
+  .imagesHorizontalContainer img{
+    min-width: 300px;
   }
   .premiereImageGallerie{
-    margin-bottom: 0px;
+    margin-bottom: 25px;
   }
   .secondeImageGallerie{
-    margin-top: 0px;
+    margin-top: none;
   }
   .troisiemeImageGallerie{
     display: flex;
     margin-top: 25px;
   }
-  .imagesHorizontalContainer img{
-    width: 75%;
-    height: 75%;
-  }
+
   .imagesVerticales{
     display: none;
   }
@@ -1280,35 +1312,29 @@ textarea{
   width: 75%;
   align-items: center;
 }
-.gallerieDimageInterieur{
-  width: 75%;
-  padding: 0px;
-}
-.gallerieDimageInterieur h1{
-  color: var(--black);
-  font-size: 40px;
-  margin-top: 50px;
-  margin-bottom: 25px;
-  display: flex;
-}
-.premiereImageGallerie{
-  margin-bottom: 0px;
-}
-.secondeImageGallerie{
-  margin-top: 0px;
-}
-.troisiemeImageGallerie{
-  display: flex;
-  margin-top: 25px;
-}
-.imagesHorizontalContainer{
-  justify-content: center;
-
-}
-.imagesHorizontalContainer img{
-  width: 75%;
-  height: 75%;
-}
+  .gallerieDimageInterieur{
+    padding: 50px;
+  }
+  .gallerieDimageInterieur h1{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  .imagesHorizontalContainer{
+    margin-right: 0;
+  }
+  .imagesHorizontalContainer img{
+    min-width: 300px;
+  }
+  .premiereImageGallerie{
+    margin-bottom: 25px;
+  }
+  .secondeImageGallerie{
+    margin-top: none;
+  }
+  .troisiemeImageGallerie{
+    display: flex;
+    margin-top: 25px;
+  }
 .imagesVerticales{
   display: none;
 }
