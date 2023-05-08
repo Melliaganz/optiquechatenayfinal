@@ -64,7 +64,7 @@ service cloud.firestore {
 Ces règles autorisent les utilisateurs connectés à écrire des données dans la collection
 
 6. Créez un fichier .env dans la racine de votre projet avec les informations d'identification de votre projet Firebase. Les informations d'identification peuvent être trouvées dans l'onglet "Paramètres du projet" de votre console Firebase. Le contenu du fichier doit ressembler à ceci :
-```.env
+```env
 REACT_APP_FIREBASE_API_KEY=your_api_key
 REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
 REACT_APP_FIREBASE_DATABASE_URL=your_database_url
@@ -74,7 +74,7 @@ REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 REACT_APP_FIREBASE_APP_ID=your_app_id
 ```
 7. Dans le fichier src/firebase.js, vous pouvez modifier la configuration de Firebase pour utiliser votre configuration Firebase. Vous pouvez remplacer le contenu actuel de ce fichier avec le code suivant :
-```React
+```React.js
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
@@ -103,6 +103,3 @@ Vous devriez maintenant être prêt a utiliser Firebase avec votre projet React.
 #### Licence
 Ce projet est sous licence MIT
 
-N'oubliez pas de remplacer les informations d'identification Firebase dans le fichier `.env` et de mettre à jour la liste des contributeurs avec vos propres informations.
-
-J'espère que cela vous aidera à créer un README.md clair et complet pour votre projet. N'hésitez pas à me faire savoir si vous avez des questions supplémentaires ou si vous avez besoin de plus d'aide.
