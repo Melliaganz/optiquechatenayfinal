@@ -830,6 +830,12 @@ textarea{
     padding: 200px;
     border-radius: 25px;
     background-color: var(--white);
+    flex-direction: column;
+  }
+  .blockMotDePasseContainer h5{
+    padding: 25px;
+    border: #292929 3px solid;
+    border-radius: 25px;
   }
 .bouttonRetour2 a{
     border-radius: 25px 0px 0px 25px;

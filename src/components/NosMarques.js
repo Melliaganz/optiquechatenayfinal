@@ -22,17 +22,17 @@ function NosMarques() {
                 <img src="https://www.xaviergarcia.design/wp-content/uploads/2018/09/XavierGarcia_logo.png" alt="Xavier Garcia"></img></a>
                 <a href="https://www.vogue-eyewear.com/fr" target="_blank" rel="noreferrer" alt="Vogue Eyewear" title="Vogue Eyewear">
                 <img src="https://www.lunettes-experoptic.fr/photo/img/Vogue_500.jpg?time=1509728689289" alt="Vogue Eyewear"></img></a>
-                <a href="https://www.ripcurl.eu/fr/" target="_blank" rel="noreferrer" alt="Rip Curl" title="Rip Curl">
-                <img src="https://logos-marques.com/wp-content/uploads/2022/03/Rip-Curl-Logo-500x312.png" alt="Rip Curl"></img></a>
+                <a href="https://www.ripcurl.eu/fr/mens/sunglasses.html" target="_blank" rel="noreferrer" alt="Rip Curl" title="Rip Curl">
+                <img src="https://krys-lynx-storage.omn.proximis.com/Imagestorage/images/0/0/5f7494263cbe5_Logo_RIP_CURL_MEN_Communication.png" alt="Rip Curl"></img></a>
             </CarouselMarquesItem>
             <CarouselMarquesItem>
-              <a href="https://www.armani.com/fr-lu/experience/emporio-armani" target="_blank" rel="noreferrer" alt="Emporio Armani" title="Emporio Armani">
-                <img src="https://logos-marques.com/wp-content/uploads/2020/06/Emporio-Armani-logo.png" alt="Emporio Armani Logo"></img></a>
+              <a href="https://www.armani.com/fr-fr/emporio-armani/homme/lunettes/lunettes-de-soleil" target="_blank" rel="noreferrer" alt="Emporio Armani" title="Emporio Armani">
+                <img src="https://logo-marque.com/wp-content/uploads/2020/11/Giorgio-Armani-Logo.png" alt="Emporio Armani Logo"></img></a>
                 <a href="https://www.ralphlauren.fr/fr/femmes/accessoires/lunettes-de-soleil/20305" target="_blank" rel="noreferrer" alt="Ralph Lauren" title="Ralph Lauren">
                 <img src="https://logos-marques.com/wp-content/uploads/2020/02/Ralph-Lauren-logo.png" alt="Ralph Lauren"></img></a>
                 <a href="https://www.steppereyewear.com/fr/" target="_blank" rel="noreferrer" alt="Stepper" title="Stepper">
                 <img src="https://seeklogo.com/images/S/stepper-logo-8BAB0CAF14-seeklogo.com.png" alt="Stepper"></img></a>
-                <a href="https://www.mauboussin.fr/" target="_blank" rel="noreferrer" alt="Mauboussin" title="Mauboussin">
+                <a href="https://www.mauboussin-eyewear.com/" target="_blank" rel="noreferrer" alt="Mauboussin" title="Mauboussin">
                 <img src="https://mauboussin.ma/modules/revsliderprestashop/uploads/Untitled-3.png" alt="Mauboussin"></img></a>
             </CarouselMarquesItem>
             <CarouselMarquesItem>

@@ -108,6 +108,7 @@ const Administration = () => {
         <div className="blockMotDePasseContainer"
         onDragOver={handleDragOver}
         onDrop={handleDrop}>
+          <h5>Glissez une image ou des images pour les uploader</h5>
           <label htmlFor="file-input">&nbsp;</label>
           <input type="file" id="file-input" multiple onChange={handleFileSelect} />
           {selectedFiles && (
