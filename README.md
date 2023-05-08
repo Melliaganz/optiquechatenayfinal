@@ -1,6 +1,6 @@
 # Optique Chatenay
 
-![Logo Du Magasin](https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/logo%2Flogoalt.png?alt=media&token=922f1f96-e8f9-480d-b5c3-1b7e141485ce)
+![Logo Du Magasin](https://firebasestorage.googleapis.com/v0/b/optiquechatenay-44520.appspot.com/o/logo%2Fimage_2023-05-08_081316875.png?alt=media&token=e92140a2-5f98-4982-9b61-a052de33e8c9)
 
 Optique Chatenay est un site vitrine pour un opticien. Le site a été créé en utilisant React et a pour but de présenter les différentes vitrines du magasin avec possibilité d'y mettre a jour la liste de photo par le propriétaire du site, de fournir un formulaire de contact, ainsi que les informations de contact et les directions pour trouver le magasin.
 
