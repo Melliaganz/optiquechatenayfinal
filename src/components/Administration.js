@@ -18,7 +18,7 @@ const Administration = () => {
     const handlePasswordSubmit = (event) => {
       event.preventDefault();
       // Vérifier si le mot de passe est correct
-      const correctPassword = process.env.REACT_APP_MOT_DE_PASSE;
+      const correctPassword = '1234';
       if (password === correctPassword) {
         setIsAuthorized(true);
       } else {
@@ -31,7 +31,15 @@ const Administration = () => {
     const handleFileSelect = (event) => {
       setSelectedFiles(event.target.files);
     };
-  
+    const handleDragOver = (event) => {
+      event.preventDefault();
+    };
+    
+    const handleDrop = (event) => {
+      event.preventDefault();
+      const fileList = event.dataTransfer.files;
+      setSelectedFiles(fileList);
+    };
     const handleFileUpload = () => {
       // Initialiser Firebase Storage
       firebase.initializeApp({
@@ -83,7 +91,8 @@ const Administration = () => {
             Retour</a>
         </div>
       {!isAuthorized ? (
-        <div className="blockMotDePasseContainer">
+        <div className="blockMotDePasseContainer"
+        >
           <form onSubmit={handlePasswordSubmit}>
             <label htmlFor="password-input" id="labelMdp">Entrez le mot de passe:</label>
             <input
@@ -96,7 +105,9 @@ const Administration = () => {
           </form>
         </div>
       ) : (
-        <div className="blockMotDePasseContainer">
+        <div className="blockMotDePasseContainer"
+        onDragOver={handleDragOver}
+        onDrop={handleDrop}>
           <label htmlFor="file-input">&nbsp;</label>
           <input type="file" id="file-input" multiple onChange={handleFileSelect} />
           {selectedFiles && (
@@ -105,7 +116,9 @@ const Administration = () => {
               <button type="button" onClick={handleFileUpload}>
                 Upload
               </button>
+              
             </div>
+            
           )}
         </div>
       )}
