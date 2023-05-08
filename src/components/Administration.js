@@ -18,7 +18,7 @@ const Administration = () => {
     const handlePasswordSubmit = (event) => {
       event.preventDefault();
       // Vérifier si le mot de passe est correct
-      const correctPassword = '1234';
+      const correctPassword = process.env.REACT_APP_MOT_DE_PASSE;
       if (password === correctPassword) {
         setIsAuthorized(true);
       } else {
