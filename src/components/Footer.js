@@ -4,6 +4,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Footer() {
+  const isHomePage = window.location.pathname === "/";
+
   return (
     <section className='footerSection'>
         <footer className='footerPage'>
@@ -28,7 +30,15 @@ function Footer() {
             </div>
             <div className='footerListe'>
               <ul>
-                <li className='elementListe2'><a href="/#accueil" alt="haut de page">Haut de page</a></li>
+                {isHomePage ? (
+              <li className='elementListe2'>
+                <a href="/#accueil" alt="haut de page">Haut de page</a>
+              </li>
+            ) : (
+              <li className='elementListe2'>
+                <a href="/" alt="accueil">Accueil</a>
+              </li>
+            )}
                 <li className='elementListe1'><a href="/mentions-legales" alt="Mention"> Mentions légales</a></li>
                 <li className='elementListe5'><a href="/administration" alt="administration">Administration</a></li>
                 <li className='elementListe4'><a href="/#contact" alt="contact">Contact</a></li>
