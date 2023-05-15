@@ -18,7 +18,7 @@ const Administration = () => {
     const handlePasswordSubmit = (event) => {
       event.preventDefault();
       // Vérifier si le mot de passe est correct
-      const correctPassword = '1234';
+      const correctPassword = 'Chatenay92!';
       if (password === correctPassword) {
         setIsAuthorized(true);
       } else {
