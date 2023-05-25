@@ -65,13 +65,13 @@ function App() {
       <main className="mainContenu">
         
       <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Home />} exact />
-      <Route path="/mentions-legales" element={<Mentions /> } exact />
-      <Route path="/administration" element={<Administration />} exact/>
-      <Route path="/gallerie" element={<GalleriedePhotos />} exact/>
-      <Route path="*" element={<NotFound />} exact />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/mentions-legales" element={<Mentions />} exact />
+          <Route path="/administration" element={<Administration />} exact />
+          <Route path="/gallerie" element={<GalleriedePhotos />} exact />
+          <Route path="*" element={<NotFound />} exact />
+        </Routes>
       </BrowserRouter>
       </main>
       <Footer />
