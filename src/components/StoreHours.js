@@ -70,6 +70,7 @@ const StoreHours = () => {
         const { matin, apresMidi } = horairesOuverture;
     
         const heureActuelle = currentDate.getHours();
+        // eslint-disable-next-line no-unused-vars
         const minuteActuelle = currentDate.getMinutes();
     
         // Si le magasin est déjà ouvert

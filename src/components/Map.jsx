@@ -20,6 +20,7 @@ const address = '432 Av. de la Division Leclerc, 92290 Châtenay-Malabry';
 
 
 function Map(props) {
+  // eslint-disable-next-line no-unused-vars
   const [map, setMap] = useState();
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',

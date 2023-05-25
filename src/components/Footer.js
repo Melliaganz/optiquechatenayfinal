@@ -1,7 +1,6 @@
 import React from 'react'
 import  LogoOptique  from "../img/logo.webp"; 
 import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Footer() {
   const isHomePage = window.location.pathname === "/";
