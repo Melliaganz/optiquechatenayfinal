@@ -40,12 +40,12 @@ function Horaires(props) {
                               <div className='textHorairesPopup'>
                           <h2>Horaires d'Optique Chatenay</h2>
                           <ul>
-                            <li>Lundi : Fermé / 14:30-19h</li>
-                            <li>Mardi : 10:00-13:00 / 14:30-19:00</li>
-                            <li>Mercredi : Fermé / 14:30-19:30</li>
-                            <li>Jeudi : 10:00-13:00 / 14:30-19:00</li>
-                            <li>Vendredi : 10:00-13:00 / 14:30-19:00</li>
-                            <li>Samedi : 10:00-13:00 / 14:30-18:00</li>
+                            <li>Lundi : Fermé / 14:30-19:00</li>
+                            <li>Mardi : 09:30-13:00 / 14:30-19:00</li>
+                            <li>Mercredi : 09:30-13:00 / 14:30-19:0</li>
+                            <li>Jeudi : 09:30-13:00 / 14:30-19:00</li>
+                            <li>Vendredi : 09:30-13:00 / 14:30-19:00</li>
+                            <li>Samedi : 09:30-13:00 / 14:30-18:00</li>
                             <li>Dimanche : Fermé</li>
                           </ul>
                           </div>

@@ -22,12 +22,12 @@ const StoreHours = () => {
   ];
 
   const horairesMagasin = {
-    Lundi: { matin: { ouverture: "Fermé", fermeture: "Fermé" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
-    Mardi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
-    Mercredi: { matin: { ouverture: "Fermé", fermeture: "Fermé" }, apresMidi: { ouverture: "14:30", fermeture: "19:30" } },
-    Jeudi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "18:30" } },
-    Vendredi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
-    Samedi: { matin: { ouverture: "10:00", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "18:00" } },
+    Lundi: { matin: { ouverture: "09:30", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Mardi: { matin: { ouverture: "09:30", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Mercredi: { matin: { ouverture: "9:30", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:30" } },
+    Jeudi: { matin: { ouverture: "09:30", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Vendredi: { matin: { ouverture: "09:30", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "19:00" } },
+    Samedi: { matin: { ouverture: "09:30", fermeture: "13:00" }, apresMidi: { ouverture: "14:30", fermeture: "18:00" } },
     Dimanche: { matin: { ouverture: "Fermé", fermeture: "Fermé" }, apresMidi: { ouverture: "Fermé", fermeture: "Fermé" } }
   };
 
