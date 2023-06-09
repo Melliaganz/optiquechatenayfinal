@@ -40,7 +40,7 @@ function ChoisirOptique() {
             <div className='paragrapheTextChoisir'>
                 <div className='paragraphe1'>
                 <span className='services'><FontAwesomeIcon icon={faArrowsToEye} /></span>
-                <h4 className='rose'>Services à la persone</h4>
+                <h4 className='rose'>Services à la personne</h4>
                 </div>
                 <div className='liste'>
                     <ul>
