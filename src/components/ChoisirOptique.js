@@ -20,7 +20,12 @@ function ChoisirOptique() {
                 </div>
                 <div className='liste'>
                     <ul>
-                        <li>Équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
+                        <li>Une équipe de professionels de l'optique<br/>
+                        pour vous accompagner dans votre choix.
+                        <br/>Nous choisissons avec vous l'équipement
+                        <br/> qui vous convient en conformité avec
+                        <br/> vos besoins esthétiques, optiques et <br/>
+                        dans le respect de votre budget </li>
                     </ul>
                 </div>
             </div>
@@ -31,21 +36,22 @@ function ChoisirOptique() {
                 </div>
                 <div className='liste'>
                     <ul>
-                        <li>Large gamme de lentilles</li>
-                        <li>Plus de 1000 montures de marques pour femme <br/> homme et enfant </li>
-                        <li>2ème paire à 1€*</li>
+                        <li>Lentilles journalières et "freshlook colors" en stock magasin</li>
+                        <li>Plus de 1200 montures de marques pour femme <br/> homme et enfant et la deuxième paire à 1€* </li>
+                        <li>OFFRE 100% SANTE: 300 modèles <br/> Femmes Hommes et enfants pris en charge à 100%</li>
                     </ul>
                 </div>
             </div>
             <div className='paragrapheTextChoisir'>
                 <div className='paragraphe1'>
                 <span className='services'><FontAwesomeIcon icon={faArrowsToEye} /></span>
-                <h4 className='rose'>Services à la personne</h4>
+                <h4 className='rose'>Nos services</h4>
                 </div>
                 <div className='liste'>
                     <ul>
                         <li>Examen de vue*</li>
-                        <li>Remise en état et ajustage</li>
+                        <li>Remise en état et nettoyage</li>
+                        <li>Ajustage de vos lunettes</li>
                     </ul>
                 </div>
             </div>
@@ -56,7 +62,8 @@ function ChoisirOptique() {
                 </div>
                 <div className='liste'>
                     <ul>
-                        <li>Équipe de professionnels de l'optique pour vous <br/> accompagner dans votre choix</li>
+                        <li>Nous vous proposons un paiement <br/> en 3 ou 4 fois sans frais en carte bancaire <br/> avec notre patenaire ONEY*</li>
+                        <li>Un paiement en plusieurs chèques est également possible*</li>
                     </ul>
                 </div>
             </div>
