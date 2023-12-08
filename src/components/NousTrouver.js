@@ -1,6 +1,5 @@
 import React, {FormEvent, useState } from 'react'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import Map from './Map'
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 function NousTrouver() {
@@ -47,7 +46,7 @@ function NousTrouver() {
                 </label>
                 <br />
                 <label>
-                    <textarea style={{resize: "none"}} spellCheck="true" rows="1" cols="1" placeholder='Que pouvons-nous faire pour vous?' name="message" required={true} />
+                    <textarea  spellCheck="true" placeholder='Que pouvons-nous faire pour vous?' name="message" required={true} />
                 </label>
                 <br />
                 <input type="hidden" name="_redirect" value="http://localhost:3000/"></input>
@@ -84,7 +83,7 @@ function NousTrouver() {
             </div>
         </div>
         <div className='mapLocation'>
-            <Map />
+        <iframe title='googleMaps' className="mapContainer" color='transparent' style={{backgroundColor: 'transparent', border:'none'}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.703701226676!2d2.2520138000000003!3d48.768454399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e679f2137ceefd%3A0x160af71676c25dad!2sOptique%20Chatenay!5e0!3m2!1sfr!2sfr!4v1702055062277!5m2!1sfr!2sfr" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
         </div>
     </section>
