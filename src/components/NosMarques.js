@@ -17,7 +17,7 @@ function NosMarques() {
             </CarouselMarquesItem>
             <CarouselMarquesItem>
               <a href="https://www.nafnaf.com/" target="_blank" rel="noreferrer" alt="Naf Naf" title="Naf Naf">
-                <img src="https://www.nafnaf.com/img/logo_site.jpg" alt="Naf Naf"></img></a>
+                <img src="https://nafnaf.vtexassets.com/arquivos/logo-black-nafnaf-2.png" alt="Naf Naf"></img></a>
                 <a href="https://www.xaviergarcia.design/" target="_blank" rel="noreferrer" alt="Xavier Garcia" title="Xavier Garcia">
                 <img src="https://www.lunettes-originales.fr/wp-content/uploads/2016/10/logo-xavier-garcia-une-demo.jpg" alt="Xavier Garcia"></img></a>
                 <a href="https://www.vogue-eyewear.com/fr" target="_blank" rel="noreferrer" alt="Vogue Eyewear" title="Vogue Eyewear">

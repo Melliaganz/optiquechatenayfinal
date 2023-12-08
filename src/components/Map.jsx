@@ -1,71 +1,31 @@
-import React, { useState } from 'react';
-import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
+import React from 'react';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-const containerStyle = {
-  width: '800px',
-  height: '900px',
-  
-};
-
-const center = {
-  lat: 48.76853,
-  lng: 2.25204,
-};
-
-const position = {
-  lat: 48.76853,
-  lng: 2.25204,
-};
-const address = '432 Av. de la Division Leclerc, 92290 Châtenay-Malabry';
-
-
-function Map(props) {
-  // eslint-disable-next-line no-unused-vars
-  const [map, setMap] = useState();
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API,
-  });
-  const [showInfo, setShowInfo] = React.useState(true);
-
-  const handleToggleInfo = () => {
-    setShowInfo(!showInfo);
+const Map = ({ apiKey }) => {
+  const center = {
+    lat: 48.8566,
+    lng: 2.3522,
   };
 
-  const onUnmount = React.useCallback((map) => {
-    setMap(null);
-  }, []);
+  const position = {
+    lat: 48.8566,
+    lng: 2.3522,
+  };
 
-  return isLoaded ? (
-    <div className="mapContainer">
+  return (
+    <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap
-        mapContainerStyle={containerStyle}
+        mapContainerStyle={{
+          width: '100%',
+          height: '400px',
+        }}
         center={center}
-        zoom={15}
-        onUnmount={onUnmount}
+        zoom={13}
       >
-        <Marker position={position} clickable={true} onClick={handleToggleInfo} />
-        {showInfo && (
-          <div
-            style={{
-              position: "relative",
-              top: "10px",
-              left: "10px",
-              padding: "10px",
-              background: "#fff",
-              boxShadow: "0 0 10px rgba(0,0,0,.3)",
-              zIndex: "50",
-              width: "fit-content",
-            }}
-          >
-            {address}
-          </div>
-        )}
+        <Marker position={position} />
       </GoogleMap>
-    </div>
-  ) : (
-    <></>
+    </LoadScript>
   );
-}
+};
 
 export default Map;
