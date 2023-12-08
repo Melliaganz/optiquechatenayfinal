@@ -4,17 +4,7 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API;
 
-const loadMapScript = () => {
-  const script = document.createElement('script');
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
-  script.async = true;
-  script.defer = true;
-  document.body.appendChild(script);
-};
-
-loadMapScript();
 
 root.render(
   <React.StrictMode>

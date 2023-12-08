@@ -539,15 +539,12 @@ flex-direction: column;
   padding: 50px;
   background: linear-gradient(90deg, var(--white) 50%, var(--pink) 50% );
   border-radius: 0px 25px 25px 0px;
+  flex:1;
 }
 .tableauHoraires li{
   list-style: none;
 }
-.mapContainer{
-  box-shadow: 0px 4px 27px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  overflow: hidden;
-}
+
 .formulaire{
   display: flex;
   justify-content: center;
@@ -587,6 +584,12 @@ flex-direction: column;
 }
 .telephoneInfos a:hover{
   opacity: 0.8;
+}
+.mapContainer{
+  flex: 1;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);
+  width: 100%;
 }
 .titreEtBouttons{
   display: flex;
@@ -997,7 +1000,7 @@ textarea{
     text-align: center;
     width: 100vw;
     height: 100%;
-    padding-bottom: 10px;
+    padding: 50px;
   }
   .titreEtTextetBoutton{
     display: flex;
@@ -1064,6 +1067,7 @@ textarea{
   #contact{
     display: none;
   }
+
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .accueil{
@@ -1380,6 +1384,8 @@ textarea{
   padding: 25px 0px 25px 0px;
 }
 .mapLocation{
+  width: 80%;
+  min-height: 200%;
   margin-top: 25px;
 }
 .texteCatégoriesMentions{
@@ -1388,6 +1394,9 @@ textarea{
 .sectionGalleriePhotos{
   justify-content: center;
   align-items: center;
+}
+.mapContainer{
+  flex: 1;
 }
 }
 @media screen and (min-width: 1920px) {
