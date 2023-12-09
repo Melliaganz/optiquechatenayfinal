@@ -825,22 +825,134 @@ textarea{
     align-items: center;
     min-height: 100vh;
   }
+  .motDePasseForm{
+    gap:30px;
+  }
 .blockMotDePasseContainer{
     color: var(--black);
     font-size: large;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 200px;
+    padding: 150px;
     border-radius: 25px;
     background-color: var(--white);
+    max-width: 800px;
+  max-height: 440px;
+  overflow: hidden;
+  min-width: 800px;
+  min-height: 440px;
+  }
+  #password-input{
+    font-family: 'Roboto', sans-serif;
+    height: 25px;
+    width: 250px;
+    border-radius: 25px;
+    border-width: 1;
+    border-color: var(--black);
+    padding: 10px;
+    color: var(--pink);
+    font-weight: 700;
+  }
+  .bouttonValider{
+    padding: 10px;
+    background-color: var(--pink);
+    border-radius: 25px;
+    border-width: 0;
+    width: 100px;
+  }
+  .bouttonValider:hover{
+    cursor: pointer;
+    background-color: var(--blue)
+  }
+  #bouttonVisibilite{
+    background-color: transparent;
+    border:  none;
+    color: var(--pink);
+  }
+  #bouttonVisibilite:hover{
+    cursor: pointer;
+    color: var(--grey);
+    scale: 0.9
+  }
+  #bouttonVisibilite.activeButton {
+    color: var(--blue);
+  }
+  #bouttonVisibilite.activeButton:hover{
+    color: var(--grey);
+    scale: 0.9;
+  }
+#boutton
+  .bouttonValider:hover{
+    background-color: var(--blue);
+    color: var(--pink);
+    cursor: pointer;
+  }
+  .uploaded-images-container {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    
+    margin-top: 20px;
+
+  }
+  .pagination{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+  }
+  .pagination button{
+    background-color: var(--pink);
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  .pagination button:hover{
+    cursor: pointer;
+    background-color: var(--blue);
+  }
+  .uploaded-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .uploaded-image {
+    margin: 10px;
+  }
+  
+  .uploaded-image img {
+    max-width: 100%;
+    max-height: 150px; /* Ajuste la hauteur maximale de l'image téléchargée */
+  }
+  .containeruploadFichier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containeruploadFichier img{
+    max-width: 300px;
+    min-width: 300px;
+  }
+  .motDePasseForm{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
   .blockMotDePasseContainer h5{
     padding: 25px;
     border: #292929 3px solid;
     border-radius: 25px;
   }
+  .cancelButton {
+    padding: 10px;
+    background-color: #f00; /* Couleur de fond du bouton annuler */
+    color: #fff; /* Couleur du texte du bouton annuler */
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Ajuste la marge en fonction de la disposition */
+  }
+  
 .bouttonRetour2 a{
     border-radius: 25px 0px 0px 25px;
     background-color: var(--white);
@@ -951,6 +1063,23 @@ textarea{
 }
 .erreur404 span{
   scale: 2;
+}
+.image-gallery{
+ padding-left: 200px;
+ padding-right: 200px ;
+}
+.image-gallery-content .image-gallery-slide .image-gallery-image{
+  height: 80vh;
+}
+.image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal{
+  background-color: white;
+  padding: 25px;
+  border-radius: 25px;
+}
+.image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal img{
+  height:100px;
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (max-width:576px) {
     .sectionCarouselMarques{
@@ -1068,7 +1197,25 @@ textarea{
   #contact{
     display: none;
   }
+  .image-gallery{
+    padding-left: 10px;
+    padding-right: 10px ;
+    
+   }
+   .image-gallery-content .image-gallery-slide .image-gallery-image{
+    height: 50vh;
 
+   }
+   .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal{
+     background-color: white;
+     padding: 15px;
+     border-radius: 25px;
+   }
+   .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal img{
+     height:100px;
+     width: 100%;
+     object-fit: cover;
+   }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .accueil{
@@ -1173,6 +1320,24 @@ textarea{
     align-items: center;
     flex-direction: column;
   }
+  .image-gallery{
+    padding: 50px
+    
+   }
+   .image-gallery-content .image-gallery-slide .image-gallery-image{
+    height: 50vh;
+
+   }
+   .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal{
+     background-color: white;
+     padding: 15px;
+     border-radius: 25px;
+   }
+   .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal img{
+     height:100px;
+     width: 100%;
+     object-fit: cover;
+   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .accueil{
@@ -1287,6 +1452,24 @@ textarea{
     align-items: center;
     flex-direction: column;
   }
+  .image-gallery{
+    padding: 50px;
+    
+   }
+   .image-gallery-content .image-gallery-slide .image-gallery-image{
+    height: 50vh;
+
+   }
+   .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal{
+     background-color: white;
+     padding: 15px;
+     border-radius: 25px;
+   }
+   .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal img{
+     height:100px;
+     width: 100%;
+     object-fit: cover;
+   }
 }
 @media screen and (min-width: 992px) and (max-width: 1280px) {
   .header img{
@@ -1400,6 +1583,24 @@ textarea{
 .mapContainer{
   flex: 1;
 }
+.image-gallery{
+  padding: 50px;
+  
+ }
+ .image-gallery-content .image-gallery-slide .image-gallery-image{
+  height: 50vh;
+
+ }
+ .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal{
+   background-color: white;
+   padding: 15px;
+   border-radius: 25px;
+ }
+ .image-gallery-thumbnails-wrapper.thumbnails-swipe-horizontal img{
+   height:100px;
+   width: 100%;
+   object-fit: cover;
+ }
 }
 @media screen and (min-width: 1920px) {
   .accueil{
