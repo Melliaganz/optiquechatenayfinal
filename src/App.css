@@ -825,16 +825,67 @@ textarea{
     align-items: center;
     min-height: 100vh;
   }
+  .motDePasseForm{
+    gap:30px;
+  }
 .blockMotDePasseContainer{
     color: var(--black);
     font-size: large;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 200px;
+    padding: 150px;
     border-radius: 25px;
     background-color: var(--white);
+  }
+  #password-input{
+    font-family: 'Roboto', sans-serif;
+    height: 25px;
+    width: 250px;
+    border-radius: 25px;
+    border-width: 1;
+    border-color: var(--black);
+    padding: 10px;
+    color: var(--pink);
+    font-weight: 700;
+  }
+  .bouttonValider{
+    padding: 10px;
+    background-color: var(--pink);
+    border-radius: 25px;
+    border-width: 0;
+    width: 100px;
+  }
+  .bouttonValider:hover{
+    cursor: pointer;
+    background-color: var(--blue)
+  }
+  #bouttonVisibilite{
+    background-color: transparent;
+    border:  none;
+    color: var(--pink);
+  }
+  #bouttonVisibilite:hover{
+    cursor: pointer;
+    color: var(--grey);
+    scale: 0.9
+  }
+  #bouttonVisibilite.activeButton {
+    color: var(--blue);
+  }
+  #bouttonVisibilite.activeButton:hover{
+    color: var(--grey);
+    scale: 0.9;
+  }
+#boutton
+  .bouttonValider:hover{
+    background-color: var(--blue);
+    color: var(--pink);
+    cursor: pointer;
+  }
+  .motDePasseForm{
+    display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
   }
   .blockMotDePasseContainer h5{
     padding: 25px;
