@@ -54,21 +54,20 @@ const Administration = () => {
         })
       );
 
-      // Inverser l'ordre des images pour les afficher de la plus récente à la plus ancienne
       const sortedImages = imagesWithMetadata.slice().reverse();
       setUploadedImages(sortedImages);
-      setLoadingImages(false); // Mettre à jour l'état du chargement des images
+      setLoadingImages(false); 
     } catch (error) {
       console.error('Erreur lors de la récupération des images :', error);
     }
   };
 
-  // Utiliser useEffect pour charger les images au montage du composant
+
   useEffect(() => {
     fetchUploadedImages();
   }, []);
 
-  // Fonction pour gérer le clic sur une image
+
   const handleImageClick = async (action, imageUrl) => {
     if (action === 'Supprimer') {
       const shouldDelete = window.confirm("Voulez-vous vraiment supprimer cette image ?");
@@ -105,6 +104,7 @@ const Administration = () => {
       }
     }
   };
+
 
   // Fonction pour gérer le changement de mot de passe
   const handlePasswordChange = (event) => {
@@ -285,40 +285,47 @@ const Administration = () => {
               )}
             </div>
           )}
-          {currentImages.length > 0 && (
-            <div className="uploaded-images-container">
-              <h3>Images déjà téléchargées :</h3>
-              <div className="uploaded-images">
-                {currentImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`uploaded-image ${selectedImage === image.url ? 'selected' : ''}`}
-                  >
-                    <img src={image.url} alt={`${index + 1}`} />
-                    <div className="image-buttons">
-                      <button onClick={() => handleImageClick('Modifier', image.url)}>
-                        Modifier
-                      </button>
-                      <button onClick={() => handleImageClick('Supprimer', image.url)}>
-                        Supprimer
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="pagination">
-                {pageNumbers.map((number) => (
-                  <button
-                    key={number}
-                    onClick={() => setCurrentPage(number)}
-                    className={currentPage === number ? 'active' : ''}
-                  >
-                    {number}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
+         {currentImages.length > 0 && (
+  <div className="uploaded-images-container">
+    <h3>Images déjà téléchargées :</h3>
+    <div className="uploaded-images">
+    {currentImages.map((image, index) => (
+  <div
+    key={index}
+    className={`uploaded-image ${selectedImage === image.url ? 'selected' : ''}`}
+  >
+    <img src={image.url} alt={`${index + 1}`} />
+    <div className="image-info">
+      {image.metadata && image.metadata.customMetadata && image.metadata.customMetadata.description && (
+        <div className="image-description">
+          <p>{image.metadata.customMetadata.description}</p>
+        </div>
+      )}
+      <div className="image-buttons">
+        <button onClick={() => handleImageClick('Modifier', image.url)}>
+          Modifier
+        </button>
+        <button onClick={() => handleImageClick('Supprimer', image.url)}>
+          Supprimer
+        </button>
+      </div>
+    </div>
+  </div>
+))}
+    </div>
+    <div className="pagination">
+      {pageNumbers.map((number) => (
+        <button
+          key={number}
+          onClick={() => setCurrentPage(number)}
+          className={currentPage === number ? 'active' : ''}
+        >
+          {number}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
         </div>
       )}
     </div>
