@@ -33,7 +33,6 @@ const StoreHours = () => {
 
   const formatTime = (time) => {
     if (time === null || time === undefined) {
-      console.log('Invalid time:', time);
       return 'N/A';
     }
 
@@ -55,13 +54,10 @@ const StoreHours = () => {
     const nextOpeningDay = getNextOpeningDay();
     const openingHours = storeHours.find(period => period.open?.day === (new Date().getDay() + 1) % 7);
   
-    console.log('nextOpeningDay:', nextOpeningDay);
-    console.log('openingHours:', openingHours);
+
   
     if (openingHours) {
       const { open, close } = openingHours;
-      console.log('open:', open);
-      console.log('close:', close);
       return `${formatTime(open?.time)} à ${formatTime(close?.time)}`;
     }
   
