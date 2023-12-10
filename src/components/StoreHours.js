@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const StoreHours = () => {
   const [storeHours, setStoreHours] = useState([]);
+  const [loading, setLoading] = useState(true);
   const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
   const placeId = process.env.REACT_APP_GOOGLE_PLACE_ID;
 
@@ -16,11 +17,14 @@ const StoreHours = () => {
         if (response.ok) {
           const periods = data.result?.opening_hours?.periods || [];
           setStoreHours(periods);
+          setLoading(false);
         } else {
           console.error('Error fetching place details:', data.error_message || 'Unknown error');
+          setLoading(false);
         }
       } catch (error) {
         console.error('Error fetching place details:', error.message);
+        setLoading(false);
       }
     };
 
@@ -44,7 +48,7 @@ const StoreHours = () => {
     const nextOpeningDayIndex = storeHours.findIndex(period => period.open?.day === (today + 1) % 7);
     return nextOpeningDayIndex !== -1 ? getDayName((today + 1) % 7) : null;
   };
-  
+
   const getDayName = (dayIndex) => {
     const daysOfWeek = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
     return daysOfWeek[dayIndex];
@@ -52,17 +56,25 @@ const StoreHours = () => {
 
   const getNextOpeningHours = () => {
     const openingHours = storeHours.find(period => period.open?.day === (new Date().getDay() + 1) % 7);
-  
 
-  
     if (openingHours) {
       const { open, close } = openingHours;
       return `${formatTime(open?.time)} à ${formatTime(close?.time)}`;
     }
-  
+
     return 'N/A';
   };
-  
+
+  const getNextClosingHours = () => {
+    const closingHours = storeHours.find(period => period.close?.day === (new Date().getDay() + 1) % 7);
+
+    if (closingHours) {
+      const { close } = closingHours;
+      return `${formatTime(close?.time)}`;
+    }
+
+    return 'N/A';
+  };
 
   const isStoreOpen = () => {
     const today = new Date().getDay();
@@ -79,17 +91,22 @@ const StoreHours = () => {
   return (
     <div>
       <h2>Horaires du magasin</h2>
-      {storeHours.length === 0 ? (
+      {loading ? (
+        <p>Chargement des horaires...</p>
+      ) : storeHours.length === 0 ? (
         <p>Horaires non disponibles</p>
       ) : (
         <div>
           {isStoreOpen() ? (
-            <p>Le magasin est ouvert aujourd'hui.</p>
+            <div>
+              <p>Le magasin est ouvert aujourd'hui.</p>
+              <p>Il ferme à {getNextClosingHours()}</p>
+            </div>
           ) : (
             <div>
               <p>Actuellement, le magasin est fermé.</p>
               <p>
-                Prochaines horaires d'ouverture :
+                Prochaine ouverture :&nbsp;
                 {getNextOpeningDay() !== null ? `${getNextOpeningDay()} de ${getNextOpeningHours()}` : 'N/A'}
               </p>
             </div>

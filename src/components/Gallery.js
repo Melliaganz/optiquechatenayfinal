@@ -2,25 +2,23 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 
+// Composant Spinner
+const Spinner = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color:'#ED5EAF'  }}>
+    <i className="fa fa-spinner fa-spin fa-3x"></i>
+  </div>
+);
+
 const Gallery = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    // Firebase configuration
     const firebaseConfig = {
-      apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-      authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-      databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-      projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-      storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-      messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-      appId: process.env.REACT_APP_FIREBASE_APP_ID,
-      measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+      // ... (comme dans votre code)
     };
 
     if (!firebase.apps.length) {
@@ -35,8 +33,7 @@ const Gallery = () => {
           try {
             const url = await itemRef.getDownloadURL();
             const metadata = await itemRef.getMetadata();
-            console.log('Metadata:', metadata); // Log the complete metadata for debugging
-        
+            
             return {
               url,
               alt: metadata.name,
@@ -62,36 +59,36 @@ const Gallery = () => {
       });
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
-  const totalPages = Math.ceil(images.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentImages = images.slice(startIndex, endIndex);
-
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    setSelectedImage(null); 
+    setSelectedImage(null);
   };
 
   const handleImageClick = (index) => {
-    setSelectedImage(currentImages[index]);
+    setSelectedImage(images[index]);
   };
 
   const closeModal = () => {
     setSelectedImage(null);
   };
 
+  if (loading) {
+    return <Spinner />;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  const totalPages = Math.ceil(images.length / 12);
+  const startIndex = (currentPage - 1) * 12;
+  const endIndex = startIndex + 12;
+  const currentImages = images.slice(startIndex, endIndex);
+
   return (
     <div className='galleriePhotoContainer'>
       <div className='titreGalleriePhotosPage'>
-      <h1>Gallerie de Photos</h1>
+        <h1>Gallerie de Photos</h1>
       </div>
       <div className='image-grid' id="grilleImages">
         {currentImages.map((image, index) => (
@@ -123,10 +120,9 @@ const Gallery = () => {
               &times;
             </span>
             <img src={selectedImage.url} alt={selectedImage.alt} className='modal-image' />
-            {selectedImage.description ?
-            <p className='title'>{selectedImage.description}</p> :
-            null
-}
+            {selectedImage.description ? (
+              <p className='title'>{selectedImage.description}</p>
+            ) : null}
           </div>
         </div>
       )}
