@@ -4,7 +4,7 @@ import 'firebase/compat/storage';
 
 // Composant Spinner
 const Spinner = () => (
-  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color:'red'  }}>
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color:'#ED5EAF'  }}>
     <i className="fa fa-spinner fa-spin fa-3x"></i>
   </div>
 );

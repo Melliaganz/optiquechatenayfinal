@@ -7,7 +7,7 @@ import Visibility from '@mui/icons-material/Visibility';
 
 // Composant Spinner
 const Spinner = () => (
-  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: '#ED5EAF' }}>
     <i className="fa fa-spinner fa-spin fa-3x"></i>
   </div>
 );
@@ -255,7 +255,7 @@ const Administration = () => {
           onDragOver={handleDragOver}
           onDrop={handleDrop}
         >
-          {loadingImages ? ( // Ajout du spinner pendant le chargement des images
+          {loadingImages ? (
             <Spinner />
           ) : (
             <div className="containeruploadFichier">
