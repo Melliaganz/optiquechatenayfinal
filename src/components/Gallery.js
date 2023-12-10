@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 
-// Composant Spinner
 const Spinner = () => (
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', color:'#ED5EAF'  }}>
     <i className="fa fa-spinner fa-spin fa-3x"></i>
@@ -18,7 +17,12 @@ const Gallery = () => {
 
   useEffect(() => {
     const firebaseConfig = {
-      // ... (comme dans votre code)
+      apiKey: 'YOUR_API_KEY',
+      authDomain: 'YOUR_AUTH_DOMAIN',
+      projectId: 'YOUR_PROJECT_ID',
+      storageBucket: 'YOUR_STORAGE_BUCKET',
+      messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+      appId: 'YOUR_APP_ID',
     };
 
     if (!firebase.apps.length) {
@@ -33,7 +37,7 @@ const Gallery = () => {
           try {
             const url = await itemRef.getDownloadURL();
             const metadata = await itemRef.getMetadata();
-            
+
             return {
               url,
               alt: metadata.name,
@@ -64,6 +68,18 @@ const Gallery = () => {
     setSelectedImage(null);
   };
 
+  const handlePrevImage = () => {
+    const currentIndex = images.findIndex((img) => img === selectedImage);
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+    setSelectedImage(images[prevIndex]);
+  };
+
+  const handleNextImage = () => {
+    const currentIndex = images.findIndex((img) => img === selectedImage);
+    const nextIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+    setSelectedImage(images[nextIndex]);
+  };
+
   const handleImageClick = (index) => {
     setSelectedImage(images[index]);
   };
@@ -73,7 +89,7 @@ const Gallery = () => {
   };
 
   if (loading) {
-    return <Spinner />;
+    return <div className='galleriePhotoContainer'> <div className='image-grid'><Spinner /> </div></div>;
   }
 
   if (error) {
@@ -102,7 +118,7 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-      <div style={{ marginTop: '20px' }}>
+      <div style={{ marginTop: '20px', textAlign: 'center' }}>
         {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
           <button
             key={page}
@@ -123,6 +139,8 @@ const Gallery = () => {
             {selectedImage.description ? (
               <p className='title'>{selectedImage.description}</p>
             ) : null}
+            <button className='modal-nav-button' onClick={handlePrevImage}>&lt;</button>
+            <button className='modal-nav-button' onClick={handleNextImage}>&gt;</button>
           </div>
         </div>
       )}
