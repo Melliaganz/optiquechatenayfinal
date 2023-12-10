@@ -51,7 +51,6 @@ const StoreHours = () => {
   };
 
   const getNextOpeningHours = () => {
-    const nextOpeningDay = getNextOpeningDay();
     const openingHours = storeHours.find(period => period.open?.day === (new Date().getDay() + 1) % 7);
   
 
