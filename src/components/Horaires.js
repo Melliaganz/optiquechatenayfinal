@@ -21,11 +21,12 @@ function Horaires(props) {
   function togglePopup() {
     setIsPopupOpen(!isPopupOpen);
   }
+
   return (
     <div className='blocHoraires'>
                     <div className='blocHorairesTexte'>
                       <div className='encadréOuvertFermé'>
-                        <StoreHours />
+                        <StoreHours/>
                         </div>
                         <button onClick={togglePopup} className='bouttonHoraires'>
                             Voir les horaires

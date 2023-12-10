@@ -5,6 +5,7 @@ import 'firebase/compat/auth';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Visibility from '@mui/icons-material/Visibility';
 
+// Initialisation de Firebase
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -27,8 +28,10 @@ const Administration = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const imagesPerPage = 4; // Choisir le nombre d'images par page selon tes préférences
 
+  const imagesPerPage = 4; 
+
+  // Fonction pour récupérer les images depuis Firebase Storage
   const fetchUploadedImages = async () => {
     const storage = firebase.storage();
     const storageRef = storage.ref('images');
@@ -43,44 +46,63 @@ const Administration = () => {
         })
       );
 
-      // Trier les images par date d'upload (du plus récent au plus ancien)
-      const sortedImages = imagesWithMetadata.sort((a, b) =>
-        b.metadata.timeCreated - a.metadata.timeCreated
-      );
-
-      setUploadedImages(sortedImages.map((image) => image.url));
+      // Inverser l'ordre des images pour les afficher de la plus récente à la plus ancienne
+      const sortedImages = imagesWithMetadata.slice().reverse();
+      setUploadedImages(sortedImages);
     } catch (error) {
       console.error('Erreur lors de la récupération des images :', error);
     }
   };
 
+  // Utiliser useEffect pour charger les images au montage du composant
   useEffect(() => {
     fetchUploadedImages();
   }, []);
 
-  const handleImageClick = (imageUrl) => {
-    const shouldDelete = window.confirm("Voulez-vous vraiment supprimer cette image ?");
-
-    if (shouldDelete) {
-      const storage = firebase.storage();
-      const imageRef = storage.refFromURL(imageUrl);
-
-      imageRef
-        .delete()
-        .then(() => {
+  // Fonction pour gérer le clic sur une image
+  const handleImageClick = async (action, imageUrl) => {
+    if (action === 'Supprimer') {
+      const shouldDelete = window.confirm("Voulez-vous vraiment supprimer cette image ?");
+  
+      if (shouldDelete) {
+        const storage = firebase.storage();
+        const imageRef = storage.refFromURL(imageUrl);
+  
+        try {
+          await imageRef.delete();
           fetchUploadedImages();
           setSelectedImage(null);
-        })
-        .catch((error) => {
+        } catch (error) {
           console.error('Erreur lors de la suppression de l\'image :', error);
-        });
+        }
+      }
+    } else if (action === 'Modifier') {
+      const selectedImageMetadata = uploadedImages.find((image) => image.url === imageUrl);
+      const description = prompt('Entrez une nouvelle description pour l\'image :', selectedImageMetadata.metadata.description || '');
+      
+      if (description !== null) {
+        try {
+          await firebase.storage().refFromURL(imageUrl).updateMetadata({
+            customMetadata: {
+              description: description,
+            },
+          });
+          fetchUploadedImages();
+
+          console.log('Nouvelle description :', description);
+        } catch (error) {
+          console.error('Erreur lors de la mise à jour de la description de l\'image :', error);
+        }
+      }
     }
   };
 
+  // Fonction pour gérer le changement de mot de passe
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
+  // Fonction pour gérer la soumission du mot de passe
   const handlePasswordSubmit = (event) => {
     event.preventDefault();
     const correctPassword = process.env.REACT_APP_PASSWORD;
@@ -92,11 +114,13 @@ const Administration = () => {
     setPassword('');
   };
 
+  // Fonction pour basculer la visibilité du mot de passe
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
     setVisibilityButtonActive(!isVisibilityButtonActive);
   };
 
+  // Fonction pour gérer la sélection de fichiers
   const handleFileSelect = (event) => {
     const fileList = event.target.files;
     setSelectedFiles(fileList);
@@ -112,16 +136,19 @@ const Administration = () => {
     }
   };
 
+  // Fonction pour annuler le téléchargement de fichiers
   const cancelFileUpload = () => {
     setSelectedFiles(null);
     setUploadProgress(0);
     setImagePreview(null);
   };
 
+  // Fonction pour gérer le survol pendant le glisser-déposer
   const handleDragOver = (event) => {
     event.preventDefault();
   };
 
+  // Fonction pour gérer le lâcher de fichiers pendant le glisser-déposer
   const handleDrop = (event) => {
     event.preventDefault();
     const fileList = event.dataTransfer.files;
@@ -138,6 +165,7 @@ const Administration = () => {
     }
   };
 
+  // Fonction pour télécharger les fichiers sélectionnés
   const handleFileUpload = () => {
     const storage = firebase.storage();
     const storageRef = storage.ref();
@@ -168,10 +196,12 @@ const Administration = () => {
     }
   };
 
+  // Calculer les index des premières et dernières images de la page actuelle
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
   const currentImages = uploadedImages.slice(indexOfFirstImage, indexOfLastImage);
 
+  // Créer une liste de numéros de page pour la pagination
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(uploadedImages.length / imagesPerPage); i++) {
     pageNumbers.push(i);
@@ -246,13 +276,20 @@ const Administration = () => {
             <div className="uploaded-images-container">
               <h3>Images déjà téléchargées :</h3>
               <div className="uploaded-images">
-                {currentImages.map((imageUrl, index) => (
+                {currentImages.map((image, index) => (
                   <div
                     key={index}
-                    className={`uploaded-image ${selectedImage === imageUrl ? 'selected' : ''}`}
-                    onClick={() => handleImageClick(imageUrl)}
+                    className={`uploaded-image ${selectedImage === image.url ? 'selected' : ''}`}
                   >
-                    <img src={imageUrl} alt={`${index + 1}`} />
+                    <img src={image.url} alt={`${index + 1}`} />
+                    <div className="image-buttons">
+                      <button onClick={() => handleImageClick('Modifier', image.url)}>
+                        Modifier
+                      </button>
+                      <button onClick={() => handleImageClick('Supprimer', image.url)}>
+                        Supprimer
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>

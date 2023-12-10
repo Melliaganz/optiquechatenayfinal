@@ -2,7 +2,7 @@ import React from 'react'
 import Accueil from "./Accueil"
 import Carousel from './Carousel'
 import ChoisirOptique from './ChoisirOptique'
-import NousTrouver from './NousTrouver'
+import NousTrouver from './NousTrouver.tsx'
 import GalleriePhotos from './GalleriePhotos'
 
 function Home() {
