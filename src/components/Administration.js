@@ -5,6 +5,13 @@ import 'firebase/compat/auth';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Visibility from '@mui/icons-material/Visibility';
 
+// Composant Spinner
+const Spinner = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <i className="fa fa-spinner fa-spin fa-3x"></i>
+  </div>
+);
+
 // Initialisation de Firebase
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -28,6 +35,7 @@ const Administration = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loadingImages, setLoadingImages] = useState(true); // Nouvel état pour le chargement des images
 
   const imagesPerPage = 4; 
 
@@ -49,6 +57,7 @@ const Administration = () => {
       // Inverser l'ordre des images pour les afficher de la plus récente à la plus ancienne
       const sortedImages = imagesWithMetadata.slice().reverse();
       setUploadedImages(sortedImages);
+      setLoadingImages(false); // Mettre à jour l'état du chargement des images
     } catch (error) {
       console.error('Erreur lors de la récupération des images :', error);
     }
@@ -246,32 +255,36 @@ const Administration = () => {
           onDragOver={handleDragOver}
           onDrop={handleDrop}
         >
-          <div className="containeruploadFichier">
-            <h5>Glissez une image ou des images pour les uploader</h5>
-            <label htmlFor="file-input">&nbsp;</label>
-            <input
-              type="file"
-              id="file-input"
-              multiple
-              onChange={handleFileSelect}
-            />
-            {imagePreview && (
-              <div className="image-preview">
-                <img src={imagePreview} alt="Preview" />
-              </div>
-            )}
-            {selectedFiles && (
-              <div>
-                <progress value={uploadProgress} max="100" />
-                <button type="button" onClick={handleFileUpload}>
-                  Upload
-                </button>
-                <button type="button" onClick={cancelFileUpload}>
-                  Annuler
-                </button>
-              </div>
-            )}
-          </div>
+          {loadingImages ? ( // Ajout du spinner pendant le chargement des images
+            <Spinner />
+          ) : (
+            <div className="containeruploadFichier">
+              <h5>Glissez une image ou des images pour les uploader</h5>
+              <label htmlFor="file-input">&nbsp;</label>
+              <input
+                type="file"
+                id="file-input"
+                multiple
+                onChange={handleFileSelect}
+              />
+              {imagePreview && (
+                <div className="image-preview">
+                  <img src={imagePreview} alt="Preview" />
+                </div>
+              )}
+              {selectedFiles && (
+                <div>
+                  <progress value={uploadProgress} max="100" />
+                  <button type="button" onClick={handleFileUpload}>
+                    Upload
+                  </button>
+                  <button type="button" onClick={cancelFileUpload}>
+                    Annuler
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
           {currentImages.length > 0 && (
             <div className="uploaded-images-container">
               <h3>Images déjà téléchargées :</h3>

@@ -21,6 +21,7 @@ img{
   --grey: #d9d9d9;
   --white: #FFFFFF;
   --black: #292929;
+  --pinkContrast: #D31782;
 }
 *{
   margin: 0;
@@ -755,7 +756,7 @@ flex-direction: column;
   align-items: center;
 }
 .telephoneInfos a {
-  color: var(--pink);
+  color: var(--pinkContrast);
   text-decoration: none;
 }
 .telephoneInfos a:hover{
