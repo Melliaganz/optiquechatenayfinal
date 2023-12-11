@@ -491,7 +491,35 @@ flex-direction: column;
   background-color: #fff;
   cursor: pointer;
 }
+/* Ajoute un padding de 25px au composant */
+.blocHoraires {
+  padding: 25px;
+}
 
+/* Fait flotter le composant sur la page */
+.tableauHoraires {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000; /* Assure que le composant flotte au-dessus du reste du contenu */
+}
+
+/* Ajoute un ombrage au composant flottant */
+.tableauHoraires {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le bouton de fermeture du composant flottant */
+.bouttonMenuHoraires {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 .selected-page {
   background-color: var(--pink); /* Utilisez votre couleur personnalisée ici */
 }
@@ -712,15 +740,17 @@ flex-direction: column;
   background-color: var(--black);
   color: var();
   border-radius: 25px;
-  bottom: 30%;
   transition: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 9;
+  border: none;
 }
-
+.tableauHoraires pre{
+  font-family: 'Roboto', sans-serif;
+}
 .textHorairesPopup{
   align-items: flex-start;
 }
