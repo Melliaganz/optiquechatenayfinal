@@ -85,15 +85,19 @@ const StoreHours = () => {
   };
 
   const renderNextOpeningHours = (periods) => {
-    const nextOpening = periods.find(period => period.open.day === nextOpeningDay);
+    const nextOpening = getNextOpeningTime(periods); // Use the same logic as getNextOpeningTime
+
     if (nextOpening) {
       const openingTime = formatTime(nextOpening.open);
-      const closingTime = formatTime(nextOpening.close);
-
+      const closingTime = formatTime(getNextClosingTime(periods).close); // Use getNextClosingTime to get the closing time
+      console.log('nextOpeningRender haha', nextOpening);
       return (
-        <p>Les prochains horaires d'ouverture sont de {openingTime} à {closingTime}.</p>
+        <p>
+          Les prochains horaires d'ouverture sont de {openingTime} à {closingTime}.
+        </p>
       );
     }
+
     return null;
   };
 
@@ -119,6 +123,7 @@ const StoreHours = () => {
     );
 
     if (nextOpening) {
+      console.log('next Opening lol', nextOpening);
       return nextOpening;
     } else {
       const nextDayOpening = periods.find((period) => period.open.day > currentDay);
