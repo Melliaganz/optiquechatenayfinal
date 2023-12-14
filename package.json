@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-sitemap-generator": "^1.1.6",
     "react-swipeable": "^7.0.0",
     "sitemap": "^7.1.1",
     "web-vitals": "^3.3.1"
@@ -36,7 +37,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-sitemap": "react-sitemap-generator -i src -o public/sitemap.xml -u https://www.optiquechatenay.fr/"
   },
   "eslintConfig": {
     "extends": [
