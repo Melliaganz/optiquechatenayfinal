@@ -5,14 +5,12 @@ import 'firebase/compat/auth';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Visibility from '@mui/icons-material/Visibility';
 
-// Composant Spinner
 const Spinner = () => (
   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: '#ED5EAF' }}>
     <i className="fa fa-spinner fa-spin fa-3x"></i>
   </div>
 );
 
-// Initialisation de Firebase
 firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
@@ -35,11 +33,9 @@ const Administration = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [loadingImages, setLoadingImages] = useState(true); // Nouvel état pour le chargement des images
-
+  const [loadingImages, setLoadingImages] = useState(true);
   const imagesPerPage = 4; 
 
-  // Fonction pour récupérer les images depuis Firebase Storage
   const fetchUploadedImages = async () => {
     const storage = firebase.storage();
     const storageRef = storage.ref('images');
@@ -106,12 +102,10 @@ const Administration = () => {
   };
 
 
-  // Fonction pour gérer le changement de mot de passe
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
-  // Fonction pour gérer la soumission du mot de passe
   const handlePasswordSubmit = (event) => {
     event.preventDefault();
     const correctPassword = process.env.REACT_APP_PASSWORD;
@@ -123,13 +117,11 @@ const Administration = () => {
     setPassword('');
   };
 
-  // Fonction pour basculer la visibilité du mot de passe
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
     setVisibilityButtonActive(!isVisibilityButtonActive);
   };
 
-  // Fonction pour gérer la sélection de fichiers
   const handleFileSelect = (event) => {
     const fileList = event.target.files;
     setSelectedFiles(fileList);
@@ -145,19 +137,16 @@ const Administration = () => {
     }
   };
 
-  // Fonction pour annuler le téléchargement de fichiers
   const cancelFileUpload = () => {
     setSelectedFiles(null);
     setUploadProgress(0);
     setImagePreview(null);
   };
 
-  // Fonction pour gérer le survol pendant le glisser-déposer
   const handleDragOver = (event) => {
     event.preventDefault();
   };
 
-  // Fonction pour gérer le lâcher de fichiers pendant le glisser-déposer
   const handleDrop = (event) => {
     event.preventDefault();
     const fileList = event.dataTransfer.files;
@@ -174,7 +163,6 @@ const Administration = () => {
     }
   };
 
-  // Fonction pour télécharger les fichiers sélectionnés
   const handleFileUpload = () => {
     const storage = firebase.storage();
     const storageRef = storage.ref();
@@ -205,12 +193,10 @@ const Administration = () => {
     }
   };
 
-  // Calculer les index des premières et dernières images de la page actuelle
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
   const currentImages = uploadedImages.slice(indexOfFirstImage, indexOfLastImage);
 
-  // Créer une liste de numéros de page pour la pagination
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(uploadedImages.length / imagesPerPage); i++) {
     pageNumbers.push(i);

@@ -18,7 +18,6 @@ const StoreHours = () => {
         const data = await response.json();
         setStoreDetails(data.result);
 
-        // Extract opening periods for further processing
         const openingPeriods = data.result?.opening_hours?.periods;
         if (openingPeriods) {
           const nextOpening = getNextOpeningTime(openingPeriods);
@@ -27,10 +26,10 @@ const StoreHours = () => {
           setHoursUnavailable(true);
         }
 
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       } catch (error) {
         console.error('Error fetching place details:', error);
-        setLoading(false); // Set loading to false in case of an error
+        setLoading(false); 
         setHoursUnavailable(true);
       }
     };
@@ -79,17 +78,16 @@ const StoreHours = () => {
   };
 
   const getDayName = (dayNumber) => {
-    // Suppose that Sunday is day 0
     const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
     return days[dayNumber];
   };
 
   const renderNextOpeningHours = (periods) => {
-    const nextOpening = getNextOpeningTime(periods); // Use the same logic as getNextOpeningTime
+    const nextOpening = getNextOpeningTime(periods); 
 
     if (nextOpening) {
       const openingTime = formatTime(nextOpening.open);
-      const closingTime = formatTime(getNextClosingTime(periods).close); // Use getNextClosingTime to get the closing time
+      const closingTime = formatTime(getNextClosingTime(periods).close)
       console.log('nextOpeningRender haha', nextOpening);
       return (
         <p>
@@ -123,7 +121,6 @@ const StoreHours = () => {
     );
 
     if (nextOpening) {
-      console.log('next Opening lol', nextOpening);
       return nextOpening;
     } else {
       const nextDayOpening = periods.find((period) => period.open.day > currentDay);

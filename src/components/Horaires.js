@@ -5,8 +5,8 @@ const Horaires = () => {
   const [apiStoreHours, setApiStoreHours] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY; // Remplacez par votre clé API Google Places
-  const placeId = process.env.REACT_APP_GOOGLE_PLACE_ID; // Remplacez par votre ID de lieu
+  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+  const placeId = process.env.REACT_APP_GOOGLE_PLACE_ID; 
 
   const getDayName = (dayIndex) => {
     const daysTranslations = [
@@ -67,7 +67,6 @@ const Horaires = () => {
       const formattedPeriod = `${dayName}: ${formattedStartHour} - ${formattedEndHour}`;
       const index = acc.findIndex((item) => item.startsWith(dayName));
       if (index !== -1) {
-        // Si le jour est déjà présent, ajoute le créneau horaire à celui existant
         const existingDay = acc[index];
         const combinedPeriod = `${existingDay.slice(existingDay.indexOf(':') + 2)} / ${formattedPeriod.slice(formattedPeriod.indexOf(':') + 2)}`;
         acc[index] = `${dayName}: ${combinedPeriod}`;
