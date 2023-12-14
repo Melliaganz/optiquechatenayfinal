@@ -69,7 +69,7 @@ const StoreHours = () => {
         <div className='blocTextHeures'>
           <p>{statusMessage}</p>
           {nextOpeningDay !== null && (
-            <p>Le magasin ouvrira le {getDayName(nextOpeningDay)}.</p>
+            <p>Le magasin ouvrira {getDayName(nextOpeningDay)}.</p>
           )}
           {nextOpeningDay !== null && renderNextOpeningHours(storeDetails.opening_hours.periods)}
         </div>

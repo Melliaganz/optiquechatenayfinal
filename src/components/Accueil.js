@@ -16,13 +16,13 @@ function Accueil() {
                 </h1>
                 <div className='adressesEtTelBloc'>
                     <div className='adresseEtTel'>
-                <span> <PlaceIcon /></span>
+                <span aria-label='Adresse'> <PlaceIcon /></span>
                 <a className='adresse' href="https://goo.gl/maps/5D3itaxq6TTFxw9z6" target="_blank" rel="noreferrer"> 
                 432 Avenue de la Division Leclerc <br/>
                 92290 CHATENAY MALABRY </a>
                 </div>
                 <div className='telephones'>
-                <span><LocalPhoneIcon /></span>
+                <span aria-label='Téléphone'><LocalPhoneIcon /></span>
                 <a className='telephone' href="tel:+33146300359" target="_blank" rel="noreferrer">01 46 30 03 59</a>
                 </div>
                 </div>
