@@ -11,19 +11,20 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.1",
-    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.6.2",
     "axios-jsonp": "^1.0.4",
     "babel-plugin-macros": "^3.1.0",
-    "date-fns": "^2.30.0",
+    "date-fns": "^3.0.1",
     "date-fns-tz": "^2.0.0",
     "dotenv": "^16.0.3",
     "firebase": "^10.7.1",
     "is-mobile": "^4.0.0",
     "jsonp": "^0.2.1",
     "nth-check": "^2.1.1",
+    "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
@@ -57,5 +58,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
