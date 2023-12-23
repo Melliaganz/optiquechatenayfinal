@@ -88,7 +88,6 @@ const StoreHours = () => {
     if (nextOpening) {
       const openingTime = formatTime(nextOpening.open);
       const closingTime = formatTime(getNextClosingTime(periods).close)
-      console.log('nextOpeningRender haha', nextOpening);
       return (
         <p>
           Les prochains horaires d'ouverture sont de {openingTime} à {closingTime}.
