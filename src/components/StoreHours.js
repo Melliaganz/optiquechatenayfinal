@@ -137,7 +137,7 @@ const StoreHours = () => {
 
   return (
     <div className='blocTextHeures'>
-      <h2>Horaires du d'Optique Chatenay</h2>
+      <h2>Horaires d'Optique Chatenay</h2>
       {renderStoreStatus()}
     </div>
   );
